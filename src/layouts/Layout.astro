@@ -1,12 +1,7 @@
 ---
+import "@fontsource/onest/200.css";
 import "@fontsource/onest/400.css";
 import "@fontsource/onest/800.css";
-
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,12 +12,16 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>👨‍💻 Full Stack Web Developer - Franco Rossi's Portfolio</title>
   </head>
   <body class="flex w-full justify-center px-10">
     <main class="flex max-w-[1200px]">
       <slot />
     </main>
+    <div
+      class="absolute left-0 top-0 z-0 h-full w-full bg-gradient-to-b from-slate-50 to-transparent dark:from-slate-900"
+    >
+    </div>
   </body>
 </html>
 <style is:global>

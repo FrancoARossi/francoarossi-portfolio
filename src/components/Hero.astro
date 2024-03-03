@@ -1,31 +1,45 @@
 ---
+import Button from "./Button.astro";
 import { Image } from "astro:assets";
 import francoRossiImage from "../assets/images/franco-rossi-no-bg.png";
 ---
 
-<section id="hero">
-  <article class="flex flex-row justify-between">
-    <Image
-      src={francoRossiImage}
-      alt="Franco Rossi"
-      class="rounded-full size-28 overflow-hidden"
-      loading="eager"
-    />
-    <div class="flex flex-col justify-center">
-      <div class="flex">
-        <h1 class="text-4xl font-extrabold">Hey, I'm&nbsp;</h1>
+<section
+  id="hero"
+  class="z-10 mx-auto flex max-w-screen-xl flex-col items-center px-4 py-8 text-center lg:py-16"
+>
+  <!-- <Image
+    src={francoRossiImage}
+    alt="Franco Rossi"
+    class="size-28 overflow-hidden rounded-full bg-blue-600"
+    loading="eager"
+  /> -->
+  <div class="flex flex-col gap-12">
+    <div class="flex flex-col justify-center gap-2">
+      <div class="flex justify-center">
+        <h1 class="text-5xl font-extrabold">Hey, I'm&nbsp;</h1>
         <h1
-          class="text-4xl font-extrabold text-transparent bg-clip-text animate-gradient bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto]"
+          class="animate-gradient bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto] bg-clip-text text-5xl font-extrabold text-transparent"
         >
           Franco Rossi
         </h1>
       </div>
       <h2 class="text-2xl">Full Stack Web Developer</h2>
+
+      <p class="max-w-[600px] font-extralight">
+        With over 3 years of experience working with agile teams and a proficiency
+        in a variety of technologies and frameworks, I am ready to bring your
+        ideas to life through software engineering.
+      </p>
     </div>
-  </article>
-  <p>
-    With over 3 years of experience working in agile teams and a proficiency in
-    a variety of technologies and frameworks, I am ready to bring your ideas to
-    life through software engineering.
-  </p>
+
+    <div>
+      <Button variant="primary" href="mailto:francoarossi@gmail.com">
+        Get in Touch
+      </Button>
+      <Button variant="secondary" href="src/assets/pdfs/Franco_Rossi_CV_en.pdf">
+        Check my CV
+      </Button>
+    </div>
+  </div>
 </section>
