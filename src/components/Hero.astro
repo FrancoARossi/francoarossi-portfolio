@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import francoRossiImage from "../assets/images/franco-rossi-no-bg.png";
+---
+
+<section id="hero">
+  <article class="flex flex-row justify-between">
+    <Image
+      src={francoRossiImage}
+      alt="Franco Rossi"
+      class="rounded-full size-28 overflow-hidden"
+      loading="eager"
+    />
+    <div class="flex flex-col justify-center">
+      <div class="flex">
+        <h1 class="text-4xl font-extrabold">Hey, I'm&nbsp;</h1>
+        <h1
+          class="text-4xl font-extrabold text-transparent bg-clip-text animate-gradient bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto]"
+        >
+          Franco Rossi
+        </h1>
+      </div>
+      <h2 class="text-2xl">Full Stack Web Developer</h2>
+    </div>
+  </article>
+  <p>
+    With over 3 years of experience working in agile teams and a proficiency in
+    a variety of technologies and frameworks, I am ready to bring your ideas to
+    life through software engineering.
+  </p>
+</section>
