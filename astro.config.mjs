@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
-  output: 'static',
+  output: 'hybrid',
   integrations: [tailwind()],
   adapter: vercel({
     webAnalytics: { enabled: true }
