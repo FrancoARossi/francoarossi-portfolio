@@ -1,0 +1,63 @@
+---
+import { twMerge } from "tailwind-merge";
+
+type Props = {
+  position: string;
+  company: string;
+  date: string;
+  companyColorClasses: string;
+  dotColorClasses: string;
+  companyHref?: string;
+};
+
+const {
+  position,
+  company,
+  date,
+  companyColorClasses,
+  dotColorClasses,
+  companyHref,
+} = Astro.props;
+---
+
+<li class="mb-10 ms-4">
+  <div
+    class={twMerge(
+      "absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white",
+      dotColorClasses,
+    )}
+  >
+  </div>
+  <time
+    class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+    >{date}</time
+  >
+  <div class="flex">
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+      {position}
+    </h3>
+    <h3 class="text-lg font-extralight text-gray-900 dark:text-white">
+      &nbsp;|&nbsp;
+    </h3>
+    {
+      companyHref ? (
+        <a
+          class={twMerge(
+            "text-lg font-semibold underline underline-offset-2",
+            companyColorClasses,
+          )}
+          href={companyHref}
+        >
+          {company}
+        </a>
+      ) : (
+        <h3 class={twMerge("text-lg font-semibold", companyColorClasses)}>
+          {company}
+        </h3>
+      )
+    }
+  </div>
+  <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+    <slot />
+  </p>
+</li>

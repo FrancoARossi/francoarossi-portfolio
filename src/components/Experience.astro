@@ -1,0 +1,115 @@
+---
+import ExperienceTimelineItem from "./ExperienceTimelineItem.astro";
+---
+
+<section id="experience" class="flex flex-col gap-12">
+  <h3
+    class="bg-gradient-to-b from-amber-500 to-amber-700 bg-clip-text text-3xl font-bold text-transparent"
+  >
+    EXPERIENCE
+  </h3>
+  <div>
+    <ol
+      class="relative border-s border-gray-200 text-start dark:border-gray-700"
+    >
+      <ExperienceTimelineItem
+        position="Intern on the Systems Lab"
+        company="UTN-FRD"
+        companyHref="https://lsi.frd.utn.edu.ar/"
+        companyColorClasses="text-green-800 dark:text-green-600"
+        dotColorClasses="bg-green-800 dark:border-green-800 dark:bg-green-600"
+        date="Apr 2019 - Dec 2020"
+      >
+        Got to work on a project that involved the research and development of a <br
+        />
+        video game console with support for sensory peripherals.
+      </ExperienceTimelineItem>
+      <ExperienceTimelineItem
+        position="Software Developer"
+        company="Sirius Software"
+        companyHref="https://sirius.com.ar/"
+        companyColorClasses="text-blue-700 dark:text-blue-500"
+        dotColorClasses="bg-blue-200 dark:border-blue-600 dark:bg-blue-500"
+        date="Nov 2020 - Present"
+      >
+        Started as a trainee and then got promoted to a full-time position. <br
+        />
+        Worked on a variety of web development projects for big companies and startups.
+      </ExperienceTimelineItem>
+    </ol>
+    <div>
+      <h4
+        class="ml-4 border-s border-gray-200 bg-gradient-to-b from-sky-500 to-sky-700 bg-clip-text pb-2 pl-4 text-start text-xl font-bold text-transparent dark:border-gray-700"
+      >
+        Projects at Sirius Software
+      </h4>
+      <ol
+        class="relative ml-4 border-s border-gray-200 text-start dark:border-gray-700"
+      >
+        <ExperienceTimelineItem
+          position="Frontend Web Developer Trainee"
+          company="Sirius Software"
+          companyHref="https://sirius.com.ar/"
+          companyColorClasses="text-blue-700 dark:text-blue-500"
+          dotColorClasses="bg-blue-200 dark:border-blue-600 dark:bg-blue-500"
+          date="Nov 2020 - Dec 2020"
+        >
+          Joined Sirius Software and gave my first steps in the software <br />
+          development world as a frontend trainee.
+        </ExperienceTimelineItem>
+        <ExperienceTimelineItem
+          position="React Native Developer"
+          company="Dynamai"
+          companyHref="https://dynamaiapp.org/"
+          companyColorClasses="text-lime-700 dark:text-lime-500"
+          dotColorClasses="bg-lime-200 dark:border-lime-600 dark:bg-lime-500"
+          date="Dec 2020 - Feb 2021"
+        >
+          I developed a mobile app using React-Native and then <br />
+          configured and hooked it up with a CMS system called Strapi.
+        </ExperienceTimelineItem>
+        <ExperienceTimelineItem
+          position="React Developer"
+          company="Hub Technical Sales"
+          companyHref="https://technicalsales.io/resources/"
+          companyColorClasses="text-teal-700 dark:text-teal-500"
+          dotColorClasses="bg-teal-200 dark:border-teal-600 dark:bg-teal-500"
+          date="Jan 2021 - Sep 2022"
+        >
+          I developed dashboards and highly interactive user interfaces with
+          special care for performance. <br />
+          Also, owned the development of really impactful features like form autosaving
+          and <br />
+          the UI for a Salesforce integration.
+        </ExperienceTimelineItem>
+        <ExperienceTimelineItem
+          position="Full Stack MERN Developer"
+          company="DateSpot"
+          companyHref="https://www.datespot.love/"
+          companyColorClasses="text-yellow-700 dark:text-yellow-500"
+          dotColorClasses="bg-yellow-200 dark:border-yellow-600 dark:bg-yellow-500"
+          date="Sep 2022 - Apr 2023"
+        >
+          I worked on the entire stack of the web application, from the backend, <br
+          />
+          database, server configuration and domains setup to the frontend doing
+          <br />
+          development and design of user experiences.
+        </ExperienceTimelineItem>
+        <ExperienceTimelineItem
+          position="Full Stack Software Developer"
+          company="Sawyer"
+          companyHref="https://www.hisawyer.com/explore"
+          companyColorClasses="text-rose-700 dark:text-rose-500"
+          dotColorClasses="bg-rose-200 dark:border-rose-600 dark:bg-rose-500"
+          date="Oct 2022 - Present"
+        >
+          I'm currently working as part of the engineering team, <br />
+          developing new features and maintaining the existing ones with special
+          care <br />
+          on performance, scalability and security.
+        </ExperienceTimelineItem>
+      </ol>
+    </div>
+  </div>
+</section>
