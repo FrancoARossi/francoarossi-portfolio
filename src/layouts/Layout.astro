@@ -1,41 +1,43 @@
 ---
 import SpeedInsights from "@vercel/speed-insights/astro";
+import BackgroundGradient from "../components/BackgroundGradient.astro";
+import BackgroundDotsPattern from "../components/BackgroundDotsPattern.astro";
 
 import "@fontsource/onest/200.css";
 import "@fontsource/onest/400.css";
 import "@fontsource/onest/700.css";
 import "@fontsource/onest/800.css";
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Welcome to my portfolio website! I'm a Full Stack Web Developer with over 3 years of experience working with agile teams and a
-      proficiency in a variety of technologies and frameworks, I can bring your ideas to life through software engineering."
-    />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>Franco Rossi's Portfolio - Full Stack Web Developer</title>
+    <title>{title}</title>
   </head>
-  <body class="flex h-screen w-full justify-center bg-slate-950 px-10">
+  <body
+    class="flex h-screen min-h-screen w-full justify-center overscroll-none bg-slate-950 px-10"
+  >
     <SpeedInsights />
+    <BackgroundGradient />
+    <BackgroundDotsPattern />
+
     <main
       class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-20 px-4 py-8 text-center lg:py-16"
     >
       <slot />
     </main>
-    <div
-      class="absolute left-0 top-0 z-0 h-full w-full bg-gradient-to-b from-slate-50 to-transparent dark:from-slate-800"
-    >
-    </div>
-    <div
-      class="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] opacity-5 [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
-    >
-    </div>
   </body>
 </html>
 <style is:global>
@@ -46,5 +48,12 @@ import "@fontsource/onest/800.css";
   html {
     font-family: "Onest", sans-serif;
     color: #e4e4e7;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
