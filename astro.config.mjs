@@ -3,9 +3,10 @@ import tailwind from "@astrojs/tailwind";
 import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
+  output: 'static',
   integrations: [tailwind()],
-  output: 'hybrid',
   adapter: vercel({
     webAnalytics: { enabled: true }
   }),
+  site: "https://francoarossi.vercel.app/",
 });
