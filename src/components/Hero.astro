@@ -2,6 +2,8 @@
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
 import francoRossiImage from "../assets/images/franco-rossi-no-bg.webp";
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
 ---
 
 <section id="hero" class="flex flex-col items-center gap-6">
@@ -32,9 +34,28 @@ import francoRossiImage from "../assets/images/franco-rossi-no-bg.webp";
           >I can bring your ideas to life through software engineering.</span
         >
       </p>
+
+      <div class="flex justify-center gap-2">
+        <a
+          class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm"
+          href="https://www.linkedin.com/in/francoarossi/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <LinkedIn /> LinkedIn
+        </a>
+        <a
+          class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm"
+          href="https://github.com/FrancoARossi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GitHub /> GitHub
+        </a>
+      </div>
     </div>
 
-    <div>
+    <div class="flex justify-center gap-2">
       <Button
         title="Contact Franco Rossi"
         variant="primary"
