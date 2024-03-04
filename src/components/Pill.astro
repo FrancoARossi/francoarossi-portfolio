@@ -1,0 +1,19 @@
+---
+import { twMerge } from "tailwind-merge";
+
+type Props = {
+  colorClasses: string;
+  label: string;
+};
+
+const { colorClasses, label } = Astro.props;
+---
+
+<div
+  class={twMerge(
+    "inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold shadow text-black dark:text-white",
+    colorClasses,
+  )}
+>
+  {label}
+</div>
