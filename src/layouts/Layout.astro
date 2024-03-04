@@ -1,4 +1,6 @@
 ---
+import SpeedInsights from "@vercel/speed-insights/astro";
+
 import "@fontsource/onest/200.css";
 import "@fontsource/onest/400.css";
 import "@fontsource/onest/700.css";
@@ -9,13 +11,18 @@ import "@fontsource/onest/800.css";
 <html lang="en" class="bg-zinc-900">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Welcome to my portfolio website! I'm a Full Stack Web Developer with over 3 years of experience working with agile teams and a
+      proficiency in a variety of technologies and frameworks, I can bring your ideas to life through software engineering."
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>Franco Rossi's Portfolio - Full Stack Web Developer with more than 3 years of experience</title>
+    <title>Franco Rossi's Portfolio</title>
   </head>
   <body class="flex w-full justify-center px-10">
+    <SpeedInsights />
     <main
       class="z-10 mx-auto flex max-w-screen-xl flex-col items-center gap-20 px-4 py-8 text-center lg:py-16"
     >
