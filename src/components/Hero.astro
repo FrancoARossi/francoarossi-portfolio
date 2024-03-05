@@ -8,6 +8,7 @@ import GitHub from "../icons/GitHub.astro";
 
 <section id="hero" class="flex flex-col items-center gap-6">
   <figure
+    id="franco-rossi"
     class="size-40 overflow-hidden rounded-full bg-[radial-gradient(theme(colors.indigo.500),theme(colors.indigo.200))]"
   >
     <Image
@@ -77,3 +78,27 @@ import GitHub from "../icons/GitHub.astro";
     </div>
   </div>
 </section>
+
+<script>
+  let clickCounter = 0;
+
+  function handleClick() {
+    clickCounter++;
+
+    if (clickCounter === 5) {
+      const figure = document.getElementById("franco-rossi");
+      figure?.classList.add("animate-shake");
+      clickCounter = 0;
+    }
+  }
+
+  function handleRemoveShake() {
+    const figure = document.getElementById("franco-rossi");
+    figure?.classList.remove("animate-shake");
+  }
+
+  const figure = document.getElementById("franco-rossi");
+
+  figure?.addEventListener("click", handleClick);
+  figure?.addEventListener("animationend", handleRemoveShake);
+</script>
