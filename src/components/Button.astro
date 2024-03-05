@@ -6,9 +6,10 @@ type Props = {
   text?: string;
   title?: string;
   href?: string;
+  classes?: string;
 };
 
-const { variant, text, href, title } = Astro.props;
+const { variant, text, href, title, classes } = Astro.props;
 ---
 
 <a
@@ -22,6 +23,7 @@ const { variant, text, href, title } = Astro.props;
     class={twMerge(
       "relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 bg-opacity-0 ease-in",
       variant === "primary" ? "" : "bg-opacity-0 dark:bg-gray-900",
+      classes,
     )}
   >
     {text || <slot />}

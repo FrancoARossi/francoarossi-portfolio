@@ -7,11 +7,13 @@ import GitHub from "../icons/GitHub.astro";
 ---
 
 <section id="hero" class="flex flex-col items-center gap-6">
-  <figure class="size-40 rounded-full">
+  <figure
+    class="size-40 overflow-hidden rounded-full bg-[radial-gradient(theme(colors.indigo.500),theme(colors.indigo.200))]"
+  >
     <Image
       src={francoRossiImage}
       alt="Franco Rossi"
-      class="h-full w-full overflow-hidden rounded-full bg-[radial-gradient(theme(colors.indigo.500),theme(colors.indigo.200))]"
+      class="h-full w-full object-cover"
       loading="eager"
     />
   </figure>
@@ -37,7 +39,7 @@ import GitHub from "../icons/GitHub.astro";
 
       <div class="flex justify-center gap-2">
         <a
-          class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm"
+          class="flex w-24 items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm"
           href="https://www.linkedin.com/in/francoarossi/"
           target="_blank"
           rel="noopener noreferrer"
@@ -45,7 +47,7 @@ import GitHub from "../icons/GitHub.astro";
           <LinkedIn /> LinkedIn
         </a>
         <a
-          class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm"
+          class="flex w-24 items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm"
           href="https://github.com/FrancoARossi"
           target="_blank"
           rel="noopener noreferrer"
@@ -60,6 +62,7 @@ import GitHub from "../icons/GitHub.astro";
         title="Contact Franco Rossi"
         variant="primary"
         href="mailto:francoarossi@gmail.com"
+        classes="w-32"
       >
         Get in Touch
       </Button>
@@ -67,6 +70,7 @@ import GitHub from "../icons/GitHub.astro";
         title="Check Franco Rossi's CV"
         variant="secondary"
         href="pdfs/Franco_Rossi_CV_en.pdf"
+        classes="w-32"
       >
         Check my CV
       </Button>
