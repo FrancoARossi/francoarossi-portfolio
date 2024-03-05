@@ -235,31 +235,27 @@ function technologyProps(technology: string) {
   >
   <div class="flex">
     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-      {position}
+      {position} |&nbsp; {
+        companyHref ? (
+          <a
+            class={twMerge(
+              "text-lg font-semibold underline underline-offset-2",
+              companyColorClasses,
+            )}
+            title={`Navigate to ${company}'s website`}
+            href={companyHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {company}
+          </a>
+        ) : (
+          <h3 class={twMerge("text-lg font-semibold", companyColorClasses)}>
+            {company}
+          </h3>
+        )
+      }
     </h3>
-    <h3 class="text-lg font-extralight text-gray-900 dark:text-white">
-      &nbsp;|&nbsp;
-    </h3>
-    {
-      companyHref ? (
-        <a
-          class={twMerge(
-            "text-lg font-semibold underline underline-offset-2",
-            companyColorClasses,
-          )}
-          title={`Navigate to ${company}'s website`}
-          href={companyHref}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {company}
-        </a>
-      ) : (
-        <h3 class={twMerge("text-lg font-semibold", companyColorClasses)}>
-          {company}
-        </h3>
-      )
-    }
   </div>
   <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
     <slot />
