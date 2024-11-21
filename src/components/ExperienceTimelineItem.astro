@@ -22,7 +22,7 @@ const {
   technologies,
 } = Astro.props;
 
-function technologyProps(technology: string) {
+const technologyProps = (technology: string) => {
   switch (technology) {
     case "JavaScript":
       return {
@@ -230,7 +230,7 @@ function technologyProps(technology: string) {
   >
   </div>
   <time
-    class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+    class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-400"
     >{date}</time
   >
   <div class="flex">
