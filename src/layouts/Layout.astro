@@ -27,14 +27,36 @@ const { title, description } = Astro.props;
     <link rel="canonical" href="https://www.francorossi.dev" />
 
     <meta name="generator" content={Astro.generator} />
-    <meta name="keywords" content="full stack, web, developer, react, ruby, ruby on rails, postgresql, javascript, html, css" />
+    <meta name="keywords" content="react, ruby, ruby on rails, postgresql, javascript, html, css, full stack, fullstack, web, developer, engineer, tailwindcss, tailwind, next, nextjs, aws, solutions, architect, associate, agile, scrum, remote, work, hybrid" />
 
     <meta name="og:title" content={title} />
+		<meta name="og:type" content="website" />
 		<meta name="og:description" content={description} />
 		<meta name="og:url" content="https://www.francorossi.dev" />
+		<!-- <meta name="og:image" content="" /> -->
 		<meta name="og:site_name" content={title} />
-		<meta name="og:type" content="website" />
 		<meta name="og:locale" content="en_US" />
+
+    <meta name=”twitter:card” content=”summary” />
+    <meta name=”twitter:title” content={title} />
+    <meta name=”twitter:description” content={description} />
+		<meta name="twitter:url" content="https://www.francorossi.dev" />
+		<!-- <meta name="twitter:image" content="" /> -->
+
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Franco Rossi",
+      "url": "https://www.francorossi.dev/",
+      "image": "https://www.francorossi.dev/_astro/franco-rossi-no-bg.rZ8diU1d_ZoOFI8.webp",
+      "sameAs": [
+        "https://github.com/FrancoARossi",
+        "https://www.linkedin.com/in/francoarossi/"
+      ],
+      "jobTitle": "Full Stack Software Developer"  
+    }
+    </script>
 
     <title>{title}</title>
   </head>
