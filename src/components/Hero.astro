@@ -4,12 +4,7 @@ import { Image } from "astro:assets";
 import francoRossiImage from "../assets/images/franco-rossi-no-bg.webp";
 import LinkedIn from "../icons/LinkedIn.astro";
 import GitHub from "../icons/GitHub.astro";
-
-const startDateMillis = new Date("2020-11-01").getTime();
-const currentDateMillis = new Date().getTime();
-const yearsOfExperience = Math.floor(
-  (currentDateMillis - startDateMillis) / (1000 * 60 * 60 * 24 * 365.25)
-);
+import { yearsOfExperience } from "../utils/functions";
 ---
 
 <section id="hero" class="flex flex-col items-center gap-6">
@@ -38,8 +33,8 @@ const yearsOfExperience = Math.floor(
       <h2 class="text-2xl">Full Stack Web Developer</h2>
 
       <p class="max-w-[600px] font-extralight">
-        With over {yearsOfExperience} years of experience working with agile teams and a
-        proficiency in a variety of technologies and frameworks, <span
+        With over {yearsOfExperience()} years of experience working with agile teams
+        and a proficiency in a variety of technologies and frameworks, <span
           class="bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto] bg-clip-text text-transparent"
           >I can bring your ideas to life through software engineering.</span
         >

@@ -1,0 +1,23 @@
+{
+  "short_name": "Portfolio",
+  "name": "Franco Rossi's Portfolio",
+  "icons": [
+    {
+      "src": "images/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#1e293b",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1e293b",
+  "description": "Full Stack Web Developer Portfolio"
+}

@@ -3,11 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
+import { yearsOfExperience } from "../utils/functions";
 ---
 
 <Layout
   title="Franco Rossi's Portfolio"
-  description="Full Stack Web Developer | 4+ years' experience | Agile team player | React, Ruby on Rails, PostgreSQL, AWS and many more!"
+  description={`Full Stack Web Developer | ${yearsOfExperience()}+ years' experience | Agile team player | React, Ruby on Rails, PostgreSQL, AWS and many more!`}
 >
   <Hero />
   <!-- <About /> -->
@@ -15,7 +16,7 @@ import Education from "../components/Education.astro";
   <!-- <Projects /> -->
   <!-- <Education /> -->
   <div class="pb-10">
-    <span class="text-gray-300 text-xl">👨‍💻 WIP - Come back later! 👨‍💻</span>
+    <span class="text-xl text-gray-300">👨‍💻 WIP - Come back later! 👨‍💻</span>
   </div>
 </Layout>
 
