@@ -1,6 +1,7 @@
 ---
 import { twMerge } from "tailwind-merge";
 import Pill from "./Pill.astro";
+import { colorClassesByTechnology } from "../utils/constants";
 
 type Props = {
   position: string;
@@ -21,211 +22,13 @@ const {
   companyHref,
   technologies,
 } = Astro.props;
-
-const technologyProps = (technology: string) => {
-  switch (technology) {
-    case "JavaScript":
-      return {
-        colorClasses:
-          "border-yellow-500 bg-yellow-200 dark:bg-yellow-950 dark:border-yellow-800",
-        label: "JavaScript",
-      };
-    case "TypeScript":
-      return {
-        colorClasses:
-          "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
-        label: "TypeScript",
-      };
-    case "React":
-      return {
-        colorClasses:
-          "border-indigo-500 bg-indigo-200 dark:bg-indigo-950 dark:border-indigo-800",
-        label: "React",
-      };
-    case "Redux":
-      return {
-        colorClasses:
-          "border-purple-500 bg-purple-200 dark:bg-purple-950 dark:border-purple-800",
-        label: "Redux",
-      };
-    case "ReactNative":
-      return {
-        colorClasses:
-          "border-indigo-500 bg-indigo-200 dark:bg-indigo-950 dark:border-indigo-800",
-        label: "React Native",
-      };
-    case "Expo":
-      return {
-        colorClasses:
-          "border-indigo-500 bg-indigo-200 dark:bg-indigo-950 dark:border-indigo-800",
-        label: "Expo",
-      };
-    case "Firebase":
-      return {
-        colorClasses:
-          "border-yellow-500 bg-yellow-200 dark:bg-yellow-950 dark:border-yellow-800",
-        label: "Firebase",
-      };
-    case "Strapi":
-      return {
-        colorClasses:
-          "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
-        label: "Strapi",
-      };
-    case "MUI":
-      return {
-        colorClasses:
-          "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
-        label: "MUI",
-      };
-    case "RSpec":
-      return {
-        colorClasses:
-          "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
-        label: "RSpec",
-      };
-    case "Node.js":
-      return {
-        colorClasses:
-          "border-green-500 bg-green-200 dark:bg-green-950 dark:border-green-800",
-        label: "Node.js",
-      };
-    case "Express":
-      return {
-        colorClasses:
-          "border-green-500 bg-green-200 dark:bg-green-950 dark:border-green-800",
-        label: "Express",
-      };
-    case "Arduino":
-      return {
-        colorClasses:
-          "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
-        label: "Arduino",
-      };
-    case "C/C++":
-      return {
-        colorClasses:
-          "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
-        label: "C/C++",
-      };
-    case "Python":
-      return {
-        colorClasses:
-          "border-yellow-500 bg-yellow-200 dark:bg-yellow-950 dark:border-yellow-800",
-        label: "Python",
-      };
-    case "Linux":
-      return {
-        colorClasses:
-          "border-black-500 bg-black-200 dark:bg-black-950 dark:border-black-800",
-        label: "Linux",
-      };
-    case "GraphQL":
-      return {
-        colorClasses:
-          "border-pink-500 bg-pink-200 dark:bg-pink-950 dark:border-pink-800",
-        label: "GraphQL",
-      };
-    case "PostgreSQL":
-      return {
-        colorClasses:
-          "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
-        label: "PostgreSQL",
-      };
-    case "MongoDB":
-      return {
-        colorClasses:
-          "border-green-500 bg-green-200 dark:bg-green-950 dark:border-green-800",
-        label: "MongoDB",
-      };
-    case "Redis":
-      return {
-        colorClasses:
-          "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
-        label: "Redis",
-      };
-    case "Docker":
-      return {
-        colorClasses:
-          "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
-        label: "Docker",
-      };
-    case "RubyOnRails":
-      return {
-        colorClasses:
-          "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
-        label: "Ruby on Rails",
-      };
-    case "Ruby":
-      return {
-        colorClasses:
-          "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
-        label: "Ruby",
-      };
-    case "HTML":
-      return {
-        colorClasses:
-          "border-orange-500 bg-orange-200 dark:bg-orange-950 dark:border-orange-800",
-        label: "HTML",
-      };
-    case "CSS":
-      return {
-        colorClasses:
-          "border-sky-500 bg-sky-200 dark:bg-sky-950 dark:border-sky-800",
-        label: "CSS",
-      };
-    case "TailwindCSS":
-      return {
-        colorClasses:
-          "border-cyan-500 bg-cyan-200 dark:bg-cyan-950 dark:border-cyan-800",
-        label: "Tailwind CSS",
-      };
-    case "Sass":
-      return {
-        colorClasses:
-          "border-pink-500 bg-pink-200 dark:bg-pink-950 dark:border-pink-800",
-        label: "Sass",
-      };
-    case "Jest":
-      return {
-        colorClasses:
-          "border-rose-500 bg-rose-200 dark:bg-rose-950 dark:border-rose-800",
-        label: "Jest",
-      };
-    case "Git":
-      return {
-        colorClasses:
-          "border-rose-500 bg-rose-200 dark:bg-rose-950 dark:border-rose-800",
-        label: "Git",
-      };
-    case "GitHub":
-      return {
-        colorClasses:
-          "border-violet-500 bg-yviolet-200 dark:bg-violet-950 dark:border-violet-800",
-        label: "GitHub",
-      };
-    case "GitLab":
-      return {
-        colorClasses:
-          "border-amber-500 bg-amber-200 dark:bg-amber-950 dark:border-amber-800",
-        label: "GitLab",
-      };
-
-    default:
-      return {
-        colorClasses:
-          "border-black-500 bg-black-200 dark:bg-black-950 dark:border-black-800",
-        label: "default",
-      };
-  }
-}
 ---
 
 <li class="mb-10 ms-4">
   <div
     class={twMerge(
       "absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white",
-      dotColorClasses,
+      dotColorClasses
     )}
   >
   </div>
@@ -240,7 +43,7 @@ const technologyProps = (technology: string) => {
           <a
             class={twMerge(
               "text-lg font-semibold underline underline-offset-2",
-              companyColorClasses,
+              companyColorClasses
             )}
             title={`Navigate to ${company}'s website`}
             href={companyHref}
@@ -265,7 +68,13 @@ const technologyProps = (technology: string) => {
       <ul class="flex flex-wrap gap-2">
         {technologies.map((technology) => (
           <li>
-            <Pill {...technologyProps(technology)} />
+            <Pill
+              label={technology}
+              colorClasses={
+                colorClassesByTechnology[technology] ||
+                colorClassesByTechnology["default"]
+              }
+            />
           </li>
         ))}
       </ul>

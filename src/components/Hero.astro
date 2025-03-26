@@ -40,7 +40,7 @@ import { yearsOfExperience } from "../utils/functions";
         >
       </p>
 
-      <div class="flex justify-center gap-2">
+      <div class="flex justify-center gap-2 pt-2">
         <a
           class="flex w-24 items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm hover:scale-105"
           href="https://www.linkedin.com/in/francoarossi/"
@@ -87,7 +87,7 @@ import { yearsOfExperience } from "../utils/functions";
   const handleClick = () => {
     clickCounter++;
 
-    if (clickCounter === 5) {
+    if (clickCounter === 4) {
       const figure = document.getElementById("franco-rossi");
       figure?.classList.add("animate-shake");
       clickCounter = 0;
