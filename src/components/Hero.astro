@@ -40,67 +40,53 @@ import { yearsOfExperience } from "../utils/functions";
         >
       </p>
 
-      <div class="flex justify-center gap-2 pt-2">
+      <div class="flex justify-center gap-4 pt-4">
         <a
-          class="flex w-24 items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm hover:scale-105"
+          id="linkedin-anchor"
+          class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 transition-all hover:scale-110"
           href="https://www.linkedin.com/in/francoarossi/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LinkedIn /> LinkedIn
+          <div class="flex items-center gap-2">
+            <LinkedIn /> LinkedIn
+          </div>
         </a>
         <a
-          class="flex w-24 items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 text-sm hover:scale-105"
+          class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 transition-all hover:scale-110"
           href="https://github.com/FrancoARossi"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHub /> GitHub
+          <div class="flex items-center gap-2">
+            <GitHub /> GitHub
+          </div>
         </a>
       </div>
     </div>
-
-    <div class="flex justify-center gap-2">
-      <Button
-        title="Contact Franco Rossi"
-        variant="primary"
-        href="mailto:francoarossi@gmail.com"
-        classes="w-32 font-bold"
-      >
-        Get in Touch
-      </Button>
-      <Button
-        title="Check Franco Rossi's CV"
-        variant="secondary"
-        href="pdfs/Franco_Rossi_CV_en.pdf"
-        classes="w-32"
-      >
-        Check my CV
-      </Button>
-    </div>
   </div>
-</section>
 
-<script>
-  let clickCounter = 0;
+  <script>
+    let clickCounter = 0;
 
-  const handleClick = () => {
-    clickCounter++;
+    const handleClick = () => {
+      clickCounter++;
 
-    if (clickCounter === 4) {
+      if (clickCounter === 4) {
+        const figure = document.getElementById("franco-rossi");
+        figure?.classList.add("animate-shake");
+        clickCounter = 0;
+      }
+    };
+
+    const handleRemoveShake = () => {
       const figure = document.getElementById("franco-rossi");
-      figure?.classList.add("animate-shake");
-      clickCounter = 0;
-    }
-  };
+      figure?.classList.remove("animate-shake");
+    };
 
-  const handleRemoveShake = () => {
     const figure = document.getElementById("franco-rossi");
-    figure?.classList.remove("animate-shake");
-  };
 
-  const figure = document.getElementById("franco-rossi");
-
-  figure?.addEventListener("click", handleClick);
-  figure?.addEventListener("animationend", handleRemoveShake);
-</script>
+    figure?.addEventListener("click", handleClick);
+    figure?.addEventListener("animationend", handleRemoveShake);
+  </script>
+</section>

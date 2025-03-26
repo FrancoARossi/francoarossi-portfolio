@@ -1,6 +1,11 @@
+---
+import { twMerge } from "tailwind-merge";
+
+const { classes } = Astro.props;
+---
+
 <svg
-  width="16"
-  height="16"
+  class={twMerge("w-4 h-4", classes)}
   xmlns="http://www.w3.org/2000/svg"
   preserveAspectRatio="xMidYMid"
   viewBox="0 0 256 256"
