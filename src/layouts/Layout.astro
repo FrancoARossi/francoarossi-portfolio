@@ -1,13 +1,11 @@
 ---
 import SpeedInsights from "@vercel/speed-insights/astro";
-import BackgroundGradient from "../components/BackgroundGradient.astro";
 import DotsParticles from "../components/DotsParticles.astro";
 
 import "@fontsource/onest/200.css";
 import "@fontsource/onest/400.css";
 import "@fontsource/onest/700.css";
 import "@fontsource/onest/800.css";
-import BackgroundDotsPattern from "../components/BackgroundDotsPattern.astro";
 
 type Props = {
   title: string;
@@ -105,8 +103,6 @@ const { title, description } = Astro.props;
     class="flex h-screen min-h-screen w-full justify-center overscroll-none bg-slate-950 px-5 sm:px-10"
   >
     <SpeedInsights />
-    <!-- <BackgroundGradient /> -->
-    <!-- <BackgroundDotsPattern /> -->
     <DotsParticles />
 
     <main
