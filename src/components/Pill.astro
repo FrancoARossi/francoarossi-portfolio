@@ -9,11 +9,11 @@ type Props = {
 const { colorClasses, label } = Astro.props;
 ---
 
-<div
+<article
   class={twMerge(
     "inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold shadow text-black dark:text-white",
     colorClasses,
   )}
 >
   {label}
-</div>
+</article>

@@ -10,7 +10,7 @@ import { yearsOfExperience } from "../utils/functions";
 <section id="hero" class="flex flex-col items-center gap-6">
   <figure
     id="franco-rossi"
-    class="size-40 overflow-hidden rounded-full bg-[radial-gradient(theme(colors.indigo.500),theme(colors.indigo.200))] opacity-90"
+    class="size-40 overflow-hidden rounded-full bg-[radial-gradient(theme(colors.indigo.500),theme(colors.indigo.200))] brightness-95"
   >
     <Image
       src={francoRossiImage}
@@ -19,9 +19,9 @@ import { yearsOfExperience } from "../utils/functions";
       loading="eager"
     />
   </figure>
-  <div class="flex flex-col gap-12">
-    <div class="flex flex-col justify-center gap-2">
-      <div class="flex justify-center">
+  <div class="flex flex-col justify-center gap-8">
+    <article class="flex flex-col justify-center gap-2">
+      <header class="flex justify-center">
         <h1 class="text-5xl font-extrabold">
           Hey, I'm<span
             class="animate-gradient bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto] bg-clip-text text-5xl font-extrabold text-transparent"
@@ -29,7 +29,7 @@ import { yearsOfExperience } from "../utils/functions";
             Franco Rossi
           </span>
         </h1>
-      </div>
+      </header>
       <h2 class="text-2xl">Full Stack Web Developer</h2>
 
       <p class="max-w-[600px] font-extralight">
@@ -39,54 +39,54 @@ import { yearsOfExperience } from "../utils/functions";
           >I can bring your ideas to life through software engineering.</span
         >
       </p>
+    </article>
 
-      <div class="flex justify-center gap-4 pt-4">
-        <a
-          id="linkedin-anchor"
-          class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 transition-all hover:scale-110"
-          href="https://www.linkedin.com/in/francoarossi/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="flex items-center gap-2">
-            <LinkedIn /> LinkedIn
-          </div>
-        </a>
-        <a
-          class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 transition-all hover:scale-110"
-          href="https://github.com/FrancoARossi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="flex items-center gap-2">
-            <GitHub /> GitHub
-          </div>
-        </a>
-      </div>
-    </div>
+    <footer class="flex justify-center gap-4">
+      <a
+        id="linkedin-anchor"
+        class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 transition-all hover:scale-110"
+        href="https://www.linkedin.com/in/francoarossi/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="flex items-center gap-2">
+          <LinkedIn /> LinkedIn
+        </div>
+      </a>
+      <a
+        class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 transition-all hover:scale-110"
+        href="https://github.com/FrancoARossi"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="flex items-center gap-2">
+          <GitHub /> GitHub
+        </div>
+      </a>
+    </footer>
   </div>
-
-  <script>
-    let clickCounter = 0;
-
-    const handleClick = () => {
-      clickCounter++;
-
-      if (clickCounter === 4) {
-        const figure = document.getElementById("franco-rossi");
-        figure?.classList.add("animate-shake");
-        clickCounter = 0;
-      }
-    };
-
-    const handleRemoveShake = () => {
-      const figure = document.getElementById("franco-rossi");
-      figure?.classList.remove("animate-shake");
-    };
-
-    const figure = document.getElementById("franco-rossi");
-
-    figure?.addEventListener("click", handleClick);
-    figure?.addEventListener("animationend", handleRemoveShake);
-  </script>
 </section>
+
+<script>
+  let clickCounter = 0;
+
+  const handleClick = () => {
+    clickCounter++;
+
+    if (clickCounter === 4) {
+      const figure = document.getElementById("franco-rossi");
+      figure?.classList.add("animate-shake");
+      clickCounter = 0;
+    }
+  };
+
+  const handleRemoveShake = () => {
+    const figure = document.getElementById("franco-rossi");
+    figure?.classList.remove("animate-shake");
+  };
+
+  const figure = document.getElementById("franco-rossi");
+
+  figure?.addEventListener("click", handleClick);
+  figure?.addEventListener("animationend", handleRemoveShake);
+</script>
