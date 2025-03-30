@@ -8,7 +8,7 @@ import { EASTER_EGGS } from "../utils/constants.js";
   <span class="text-gray-500"
     >You've found <span id="found-easter-eggs-count"></span> out of {
       EASTER_EGGS.length
-    } easter eggs 👀</span
+    } easter eggs <span id="easter-eggs-icon"></span></span
   >
   <span class="text-base">
     Made with 💜 by <span
@@ -19,6 +19,8 @@ import { EASTER_EGGS } from "../utils/constants.js";
 </footer>
 
 <script>
+  import { updateEasterEggsIcon } from "../utils/functions.js";
+
   const thisGuy = document.getElementById("this-guy");
   thisGuy?.addEventListener("click", () => scrollTo(0, 0));
 
@@ -33,4 +35,6 @@ import { EASTER_EGGS } from "../utils/constants.js";
     foundEasterEggsCount.innerText =
       String(foundEasterEggs.filter(Boolean).length) || "0";
   }
+
+  updateEasterEggsIcon();
 </script>
