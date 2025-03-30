@@ -79,3 +79,10 @@ export const colorClassesByTechnology: { [technology: string]: string } = {
   default:
     "border-black-500 bg-black-200 dark:bg-black-950 dark:border-black-800",
 };
+
+export const navbarLinks = [
+  // { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  // { name: "Projects", href: "#projects" },
+  // { name: "Education", href: "#education" },
+];

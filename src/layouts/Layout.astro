@@ -6,6 +6,7 @@ import "@fontsource/onest/200.css";
 import "@fontsource/onest/400.css";
 import "@fontsource/onest/700.css";
 import "@fontsource/onest/800.css";
+import Header from "../components/Header.astro";
 
 type Props = {
   title: string;
@@ -100,16 +101,24 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="flex h-screen min-h-screen w-full justify-center overscroll-none bg-slate-950 px-5 sm:px-10"
+    class="mx-auto flex max-w-screen-xl flex-col justify-center overscroll-none bg-slate-950 px-5 sm:px-10"
   >
     <SpeedInsights />
     <DotsParticles />
 
-    <main
-      class="z-10 flex max-w-screen-xl flex-col items-center gap-20 px-4 py-8 text-center lg:py-16"
-    >
+    <Header />
+
+    <main class="flex flex-col items-center gap-20 px-4 py-32 text-center">
       <slot />
     </main>
+
+    <footer class="flex justify-center pb-10">
+      <span class="text-base">
+        Made with 💜 by <a href="#hero" class="underline underline-offset-2"
+          >this guy</a
+        > 👈🏻
+      </span>
+    </footer>
   </body>
 </html>
 <style is:global>
@@ -121,6 +130,7 @@ const { title, description } = Astro.props;
     font-family: "Onest", sans-serif;
     color: #e4e4e7;
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -129,23 +139,3 @@ const { title, description } = Astro.props;
     }
   }
 </style>
-
-<!-- <script is:inline>
-  const theme = (() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
-  })();
-
-  if (theme === "light") {
-    document.documentElement.classList.remove("dark");
-  } else {
-    document.documentElement.classList.add("dark");
-  }
-
-  window.localStorage.setItem("theme", theme);
-</script> -->
