@@ -9,7 +9,7 @@ import { navbarLinks } from "../utils/constants";
     id="franco-rossi-header"
     class="flex cursor-pointer select-none items-center transition-all duration-300"
   >
-    &lt;<h1 class="font-bold">Franco Rossi</h1>&nbsp;/&gt;
+    &lt;<h2 class="font-bold">Franco Rossi</h2>&nbsp;/&gt;
   </div>
   <nav>
     <menu class="flex items-center gap-4">
@@ -27,6 +27,8 @@ import { navbarLinks } from "../utils/constants";
 </header>
 
 <script>
+  import { completeEasterEgg } from "../utils/functions.js";
+
   const francoRossiHeader = document.getElementById("franco-rossi-header");
   const francoRossiHeaderColor = localStorage.getItem("francoRossiHeaderColor");
 
@@ -47,5 +49,7 @@ import { navbarLinks } from "../utils/constants";
 
     localStorage.setItem("francoRossiHeaderColor", nextColor);
     el.style.color = nextColor;
+
+    completeEasterEgg("header-color");
   });
 </script>

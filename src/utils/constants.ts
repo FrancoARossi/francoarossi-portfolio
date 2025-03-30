@@ -11,7 +11,7 @@ export const colorClassesByTechnology: { [technology: string]: string } = {
   Redux:
     "border-purple-500 bg-purple-200 dark:bg-purple-950 dark:border-purple-800",
 
-  ReactNative:
+  "React Native":
     "border-indigo-500 bg-indigo-200 dark:bg-indigo-950 dark:border-indigo-800",
 
   Expo: "border-indigo-500 bg-indigo-200 dark:bg-indigo-950 dark:border-indigo-800",
@@ -25,7 +25,7 @@ export const colorClassesByTechnology: { [technology: string]: string } = {
 
   RSpec: "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
 
-  Nodejs:
+  NodeJS:
     "border-green-500 bg-green-200 dark:bg-green-950 dark:border-green-800",
 
   Express:
@@ -53,7 +53,8 @@ export const colorClassesByTechnology: { [technology: string]: string } = {
 
   Docker: "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
 
-  RubyOnRails: "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
+  "Ruby On Rails":
+    "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
 
   Ruby: "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
 
@@ -86,3 +87,5 @@ export const navbarLinks = [
   // { name: "Projects", href: "#projects" },
   // { name: "Education", href: "#education" },
 ];
+
+export const EASTER_EGGS = ["header-color", "image-shake"];

@@ -7,6 +7,7 @@ import "@fontsource/onest/400.css";
 import "@fontsource/onest/700.css";
 import "@fontsource/onest/800.css";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 type Props = {
   title: string;
@@ -100,13 +101,7 @@ const { title, description } = Astro.props;
       <slot />
     </main>
 
-    <footer class="flex justify-center pb-10">
-      <span class="text-base">
-        Made with 💜 by <a href="#hero" class="underline underline-offset-2"
-          >this guy</a
-        > 👈🏻
-      </span>
-    </footer>
+    <Footer />
   </body>
 </html>
 <style is:global>

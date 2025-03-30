@@ -1,0 +1,36 @@
+---
+import { EASTER_EGGS } from "../utils/constants.js";
+---
+
+<footer
+  class="flex flex-col justify-center gap-2 pb-10 text-center align-middle"
+>
+  <span class="text-gray-500"
+    >You've found <span id="found-easter-eggs-count"></span> out of {
+      EASTER_EGGS.length
+    } easter eggs 👀</span
+  >
+  <span class="text-base">
+    Made with 💜 by <span
+      id="this-guy"
+      class="cursor-pointer underline underline-offset-2">this guy</span
+    > 👈🏻
+  </span>
+</footer>
+
+<script>
+  const thisGuy = document.getElementById("this-guy");
+  thisGuy?.addEventListener("click", () => scrollTo(0, 0));
+
+  const foundEasterEggs =
+    localStorage.getItem("foundEasterEggs")?.split(",") || [];
+
+  const foundEasterEggsCount = document.getElementById(
+    "found-easter-eggs-count"
+  );
+
+  if (foundEasterEggsCount) {
+    foundEasterEggsCount.innerText =
+      String(foundEasterEggs.filter(Boolean).length) || "0";
+  }
+</script>

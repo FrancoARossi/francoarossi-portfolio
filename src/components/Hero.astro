@@ -10,7 +10,7 @@ import { yearsOfExperience } from "../utils/functions";
 <section id="hero" class="flex flex-col items-center gap-6">
   <figure
     id="franco-rossi"
-    class="size-40 overflow-hidden rounded-full bg-[radial-gradient(theme(colors.indigo.500),theme(colors.indigo.200))] brightness-95"
+    class="size-40 cursor-pointer overflow-hidden rounded-full bg-[radial-gradient(theme(colors.indigo.500),theme(colors.indigo.200))] brightness-95"
   >
     <Image
       src={francoRossiImage}
@@ -68,6 +68,8 @@ import { yearsOfExperience } from "../utils/functions";
 </section>
 
 <script>
+  import { completeEasterEgg } from "../utils/functions.js";
+
   let clickCounter = 0;
 
   const handleClick = () => {
@@ -77,6 +79,8 @@ import { yearsOfExperience } from "../utils/functions";
       const figure = document.getElementById("franco-rossi");
       figure?.classList.add("animate-shake");
       clickCounter = 0;
+
+      completeEasterEgg("image-shake");
     }
   };
 
