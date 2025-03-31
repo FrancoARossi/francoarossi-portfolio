@@ -56,15 +56,22 @@ import { navbarLinks } from "@utils/constants";
           }
           <div class="flex h-full w-full flex-col justify-end">
             <a
-              class="block h-fit w-fit transform items-center gap-1 rounded-full border border-slate-600 bg-slate-900 p-4 px-3 py-2 text-white shadow-lg transition-all duration-300 hover:scale-110 lg:hidden"
+              class="group relative z-50 h-fit w-fit items-center gap-1 rounded-full border border-slate-600 bg-slate-900 text-white shadow-lg transition-all duration-300 hover:scale-110 lg:hidden"
               href="https://www.linkedin.com/in/francoarossi/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span class="sr-only">Contact link to LinkedIn</span>
-              <div class="flex h-full w-full items-center justify-center gap-2">
+              <div
+                class="z-10 flex h-full w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-3 py-2"
+              >
                 <LinkedIn classes="w-4 h-4" />
                 <span class="block"> Let's connect!</span>
+              </div>
+
+              <div
+                class="absolute -inset-[1px] -z-10 animate-gradient rounded-full bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto] opacity-75 blur transition duration-300 group-hover:opacity-100 group-hover:duration-200"
+              >
               </div>
             </a>
           </div>

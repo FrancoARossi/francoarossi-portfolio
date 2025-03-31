@@ -2,19 +2,30 @@
 import LinkedIn from "@icons/LinkedIn.astro";
 ---
 
-<a
+<div
+  class="fixed bottom-6 right-6 scale-0 opacity-0 transition duration-300"
   id="contact-button"
-  class="fixed bottom-6 right-6 h-14 w-14 scale-0 transform items-center gap-1 rounded-full border border-slate-600 bg-slate-900 p-4 px-3 py-2 text-white opacity-0 shadow-lg transition-all duration-300 hover:scale-110 lg:h-auto lg:w-auto"
-  href="https://www.linkedin.com/in/francoarossi/"
-  target="_blank"
-  rel="noopener noreferrer"
 >
-  <span class="sr-only">Contact link to LinkedIn</span>
-  <div class="flex h-full w-full items-center justify-center gap-2">
-    <LinkedIn classes="w-6 h-6 lg:w-4 lg:h-4" />
-    <span class="hidden lg:block"> Let's connect!</span>
-  </div>
-</a>
+  <a
+    class="group relative flex h-14 w-14 items-center rounded-full border border-slate-600 bg-slate-900 text-white transition duration-300 hover:scale-110 lg:h-auto lg:w-auto"
+    href="https://www.linkedin.com/in/francoarossi/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div
+      class="absolute -inset-[1px] -z-10 animate-gradient rounded-full bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto] opacity-75 blur transition duration-300 group-hover:opacity-100 group-hover:duration-200"
+    >
+    </div>
+
+    <div
+      class="z-10 flex h-full w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-3 py-2"
+    >
+      <span class="sr-only">Contact link to LinkedIn</span>
+      <LinkedIn classes="w-6 h-6 lg:w-4 lg:h-4" />
+      <span class="hidden lg:block">Let's connect!</span>
+    </div>
+  </a>
+</div>
 
 <script>
   const linkedInAnchor = document.getElementById("linkedin-anchor");
