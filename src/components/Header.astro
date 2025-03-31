@@ -1,30 +1,82 @@
 ---
+import LinkedIn from "../icons/LinkedIn.astro";
 import { navbarLinks } from "../utils/constants";
+import ContactButton from "./ContactButton.astro";
 ---
 
 <header
   class="fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-around bg-slate-950 text-slate-200"
 >
-  <div
-    id="franco-rossi-header"
-    class="flex cursor-pointer select-none items-center transition-all duration-300"
-  >
-    &lt;<h2 class="font-bold">Franco Rossi</h2>&nbsp;/&gt;
+  <div class="flex w-full max-w-screen-xl items-center justify-between px-10">
+    <div
+      id="franco-rossi-header"
+      class="flex cursor-pointer select-none items-center transition-all duration-300"
+    >
+      &lt;<h2 class="font-bold">Franco Rossi</h2>&nbsp;/&gt;
+    </div>
+    <nav>
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 lg:hidden"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="h-5 w-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+      <div class="w-auto">
+        <menu
+          id="navbar-default"
+          class="absolute -right-64 top-16 flex h-[calc(100vh-64px)] w-56 flex-col items-start justify-between gap-4 bg-slate-900 p-8 transition-all duration-300 lg:static lg:mt-0 lg:h-auto lg:w-auto lg:flex-row lg:space-x-8 lg:border-0 lg:bg-transparent lg:p-0 rtl:space-x-reverse"
+        >
+          {
+            navbarLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="transition-all duration-200 hover:text-slate-400"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+          <a
+            class="h-auto w-auto transform items-center gap-1 rounded-full border border-slate-600 bg-slate-900 p-4 px-3 py-2 text-white shadow-lg transition-all duration-300 hover:scale-110 lg:hidden"
+            href="https://www.linkedin.com/in/francoarossi/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="sr-only">Contact link to LinkedIn</span>
+            <div class="flex h-full w-full items-center justify-center gap-2">
+              <LinkedIn classes="w-4 h-4" />
+              <span class="block"> Let's connect!</span>
+            </div>
+          </a>
+        </menu>
+      </div>
+    </nav>
   </div>
-  <nav>
-    <menu class="flex items-center gap-4">
-      {
-        navbarLinks.map((link) => (
-          <li>
-            <a href={link.href} class="transition-all duration-200 hover:text-slate-400">
-              {link.name}
-            </a>
-          </li>
-        ))
-      }
-    </menu>
-  </nav>
 </header>
+<div
+  id="mobile-nabvar-backdrop"
+  class="pointer-events-none fixed inset-0 z-40 bg-black opacity-0 transition-opacity duration-300 lg:hidden"
+>
+</div>
 
 <script>
   import { completeEasterEgg } from "../utils/functions.js";
@@ -52,4 +104,69 @@ import { navbarLinks } from "../utils/constants";
 
     completeEasterEgg("header-color");
   });
+</script>
+
+<script>
+  // Navbar responsiveness
+  const toggleButton = document.querySelector(
+    '[data-collapse-toggle="navbar-default"]'
+  ) as HTMLButtonElement;
+  const navbarMenu = document.getElementById(
+    "navbar-default"
+  ) as HTMLMenuElement;
+
+  const backdrop = document.getElementById(
+    "mobile-nabvar-backdrop"
+  ) as HTMLDivElement;
+
+  function showBackdrop() {
+    backdrop.classList.remove("opacity-0");
+    backdrop.classList.add("opacity-50");
+  }
+
+  function hideBackdrop() {
+    backdrop.classList.remove("opacity-50");
+    backdrop.classList.add("opacity-0");
+  }
+
+  toggleButton.addEventListener("click", () => {
+    const isExpanded = navbarMenu.classList.contains("right-0");
+
+    if (isExpanded) {
+      navbarMenu.classList.replace("right-0", "-right-64");
+      hideBackdrop();
+    } else {
+      navbarMenu.classList.replace("-right-64", "right-0");
+      showBackdrop();
+    }
+
+    toggleButton.setAttribute("aria-expanded", isExpanded.toString());
+  });
+
+  const navLinks = navbarMenu?.querySelectorAll("a");
+  navLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      navbarMenu.classList.replace("right-0", "-right-64");
+      toggleButton.setAttribute("aria-expanded", "false");
+      hideBackdrop();
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const isClickInsideNav = navbarMenu?.contains(event.target as Node);
+    const isClickOnToggle = toggleButton.contains(event.target as Node);
+
+    if (
+      navbarMenu &&
+      !isClickInsideNav &&
+      !isClickOnToggle &&
+      !navbarMenu.classList.contains("-right-64")
+    ) {
+      navbarMenu.classList.replace("right-0", "-right-64");
+      toggleButton.setAttribute("aria-expanded", "false");
+      hideBackdrop();
+    }
+  });
+
+  // TODO: Add backdrop filter on mobile menu expand
 </script>

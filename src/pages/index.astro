@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Main from "../layouts/Main.astro";
 import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
@@ -7,7 +7,7 @@ import { yearsOfExperience } from "../utils/functions";
 import ContactButton from "../components/ContactButton.astro";
 ---
 
-<Layout
+<Main
   title="Franco Rossi's Portfolio"
   description={`Full Stack Web Developer | ${yearsOfExperience()}+ years' experience | Agile team player | React, Ruby on Rails, PostgreSQL, AWS and many more!`}
 >
@@ -18,6 +18,6 @@ import ContactButton from "../components/ContactButton.astro";
   <!-- <Education /> -->
 
   <ContactButton />
-</Layout>
+</Main>
 
 <style></style>
