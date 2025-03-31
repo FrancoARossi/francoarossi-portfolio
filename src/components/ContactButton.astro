@@ -22,7 +22,8 @@ import LinkedIn from "@icons/LinkedIn.astro";
 
   function handleScroll() {
     const rect = linkedInAnchor?.getBoundingClientRect();
-    if (rect && rect.bottom < 0) {
+    // 64px = height of the header
+    if (rect && rect.bottom < 64) {
       contactButton?.classList.remove("opacity-0", "scale-0");
     } else {
       contactButton?.classList.add("opacity-0", "scale-0");
