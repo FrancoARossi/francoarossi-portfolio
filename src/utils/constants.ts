@@ -82,7 +82,7 @@ export const colorClassesByTechnology: { [technology: string]: string } = {
 };
 
 export const navbarLinks = [
-  // { name: "About", href: "#about" },
+  { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   // { name: "Projects", href: "#projects" },
   // { name: "Education", href: "#education" },
