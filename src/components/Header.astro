@@ -1,7 +1,6 @@
 ---
-import LinkedIn from "../icons/LinkedIn.astro";
-import { navbarLinks } from "../utils/constants";
-import ContactButton from "./ContactButton.astro";
+import LinkedIn from "@icons/LinkedIn.astro";
+import { navbarLinks } from "@utils/constants";
 ---
 
 <header
@@ -79,7 +78,7 @@ import ContactButton from "./ContactButton.astro";
 </div>
 
 <script>
-  import { completeEasterEgg } from "../utils/functions.js";
+  import { completeEasterEgg } from "@utils/functions.js";
 
   const francoRossiHeader = document.getElementById("franco-rossi-header");
   const francoRossiHeaderColor = localStorage.getItem("francoRossiHeaderColor");
@@ -167,6 +166,4 @@ import ContactButton from "./ContactButton.astro";
       hideBackdrop();
     }
   });
-
-  // TODO: Add backdrop filter on mobile menu expand
 </script>

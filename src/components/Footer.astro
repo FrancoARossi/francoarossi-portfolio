@@ -1,5 +1,5 @@
 ---
-import { EASTER_EGGS } from "../utils/constants.js";
+import { EASTER_EGGS } from "@utils/constants.js";
 ---
 
 <footer
@@ -19,7 +19,7 @@ import { EASTER_EGGS } from "../utils/constants.js";
 </footer>
 
 <script>
-  import { updateEasterEggsIcon } from "../utils/functions.js";
+  import { updateEasterEggsIcon } from "@utils/functions.js";
 
   const thisGuy = document.getElementById("this-guy");
   thisGuy?.addEventListener("click", () => scrollTo(0, 0));

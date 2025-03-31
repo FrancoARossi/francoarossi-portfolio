@@ -1,10 +1,9 @@
 ---
-import Button from "./Button.astro";
 import { Image } from "astro:assets";
-import francoRossiImage from "../assets/images/franco-rossi-no-bg.webp";
-import LinkedIn from "../icons/LinkedIn.astro";
-import GitHub from "../icons/GitHub.astro";
-import { yearsOfExperience } from "../utils/functions";
+import francoRossiImage from "@assets/images/franco-rossi-no-bg.webp";
+import LinkedIn from "@icons/LinkedIn.astro";
+import GitHub from "@icons/GitHub.astro";
+import { yearsOfExperience } from "@utils/functions";
 ---
 
 <section id="hero" class="flex flex-col items-center gap-6">
@@ -70,7 +69,7 @@ import { yearsOfExperience } from "../utils/functions";
 </section>
 
 <script>
-  import { completeEasterEgg } from "../utils/functions.js";
+  import { completeEasterEgg } from "@utils/functions.js";
 
   let clickCounter = 0;
 
