@@ -123,11 +123,13 @@ import { navbarLinks } from "@utils/constants";
   function showBackdrop() {
     backdrop.classList.remove("opacity-0");
     backdrop.classList.add("opacity-50");
+    backdrop.classList.remove("pointer-events-none");
   }
 
   function hideBackdrop() {
     backdrop.classList.remove("opacity-50");
     backdrop.classList.add("opacity-0");
+    backdrop.classList.add("pointer-events-none");
   }
 
   toggleButton.addEventListener("click", () => {
