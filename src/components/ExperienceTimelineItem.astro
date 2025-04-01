@@ -24,17 +24,17 @@ const {
 } = Astro.props;
 ---
 
-<li class="mb-10 ms-4">
+<li class="pb-10 pl-4">
   <article>
     <div
       class={twMerge(
-        "absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white",
+        "absolute -start-1.5 pt-1.5 h-3 w-3 rounded-full border border-white",
         dotColorClasses
       )}
     >
     </div>
     <time
-      class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-400"
+      class="pb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-400"
     >
       {date}
     </time>
@@ -63,13 +63,13 @@ const {
         }
       </h3>
     </header>
-    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+    <p class="text-base font-normal text-gray-500 dark:text-gray-400">
       <slot />
     </p>
     <footer>
       {
         technologies ? (
-          <ul class="flex flex-wrap gap-2">
+          <ul class="flex flex-wrap gap-2 pt-4">
             {technologies.map((technology) => (
               <li>
                 <Pill
