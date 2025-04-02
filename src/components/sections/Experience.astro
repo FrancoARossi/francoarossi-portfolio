@@ -5,7 +5,9 @@ import Title from "@components/Title.astro";
 
 <section id="experience" class="flex flex-col">
   <Title> Experience </Title>
-  <ol class="relative border-s border-gray-200 text-start dark:border-gray-700">
+  <ol
+    class="relative flex flex-col gap-10 border-s border-gray-200 text-start dark:border-gray-700"
+  >
     <ExperienceTimelineItem
       position="Intern on the Systems Lab"
       company="UTN-FRD"
@@ -44,7 +46,7 @@ import Title from "@components/Title.astro";
       Projects at Sirius Software
     </h4>
     <ol
-      class="relative pl-4 ml-4 border-s border-gray-200 pt-4 text-start dark:border-gray-700"
+      class="relative ml-4 flex flex-col gap-10 border-s border-gray-200 pl-4 pt-4 text-start dark:border-gray-700"
     >
       <ExperienceTimelineItem
         position="Frontend Web Developer Trainee"
