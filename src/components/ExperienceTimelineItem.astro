@@ -1,12 +1,12 @@
 ---
 import { twMerge } from "tailwind-merge";
 import Pill from "@components/Pill.astro";
-import { colorClassesByTechnology } from "@utils/constants";
+import { TECHNOLOGIES_STYLES } from "@utils/constants";
 
 type Props = {
-  position: string;
+  title: string;
   company: string;
-  date: string;
+  timePeriod: string;
   companyColorClasses: string;
   dotColorClasses: string;
   companyHref?: string;
@@ -14,9 +14,9 @@ type Props = {
 };
 
 const {
-  position,
+  title,
   company,
-  date,
+  timePeriod,
   companyColorClasses,
   dotColorClasses,
   companyHref,
@@ -36,11 +36,11 @@ const {
     <time
       class="pb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-400"
     >
-      {date}
+      {timePeriod}
     </time>
     <header class="flex">
       <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-        {position} |&nbsp; {
+        {title} |&nbsp; {
           companyHref ? (
             <a
               class={twMerge(
@@ -75,8 +75,8 @@ const {
                 <Pill
                   label={technology}
                   colorClasses={
-                    colorClassesByTechnology[technology] ||
-                    colorClassesByTechnology["default"]
+                    TECHNOLOGIES_STYLES[technology] ||
+                    TECHNOLOGIES_STYLES["default"]
                   }
                 />
               </li>

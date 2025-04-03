@@ -1,4 +1,11 @@
-export const colorClassesByTechnology: { [technology: string]: string } = {
+export const NAV_LINKS = [
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  // { name: "Projects", href: "#projects" },
+  // { name: "Education", href: "#education" },
+];
+
+export const TECHNOLOGIES_STYLES: { [technology: string]: string } = {
   JavaScript:
     "border-yellow-500 bg-yellow-200 dark:bg-yellow-950 dark:border-yellow-800",
 
@@ -80,12 +87,5 @@ export const colorClassesByTechnology: { [technology: string]: string } = {
   default:
     "border-black-500 bg-black-200 dark:bg-black-950 dark:border-black-800",
 };
-
-export const navbarLinks = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  // { name: "Projects", href: "#projects" },
-  // { name: "Education", href: "#education" },
-];
 
 export const EASTER_EGGS = ["header-color", "image-shake"];
