@@ -4,7 +4,7 @@ import Title from "@components/Title.astro";
 import ChevronDown from "@components/icons/ChevronDown.astro";
 ---
 
-<section id="experience" class="flex flex-col gap-12">
+<section id="experience" class="flex flex-col">
   <Title> Experience </Title>
   <ol
     class="relative flex flex-col gap-10 border-s border-gray-200 text-start dark:border-gray-700"
@@ -42,7 +42,7 @@ import ChevronDown from "@components/icons/ChevronDown.astro";
   </ol>
   <div>
     <h4
-      class="w-fit border-b border-s border-gray-200 bg-gradient-to-b from-sky-500 to-sky-700 bg-clip-text px-4 pb-2 text-start text-xl font-bold text-transparent dark:border-gray-700"
+      class="w-fit border-b border-s border-gray-200 bg-gradient-to-b from-sky-400 to-sky-600 bg-clip-text px-4 pb-2 pt-10 text-start text-xl font-bold text-transparent dark:border-gray-700"
     >
       Projects at Sirius Software
     </h4>
@@ -170,9 +170,7 @@ import ChevronDown from "@components/icons/ChevronDown.astro";
           >.
         </ExperienceTimelineItem>
       </ol>
-      <ChevronDown
-        classes="absolute top-[calc(100%-8px)] left-[4.5px] text-gray-200 dark:text-gray-700"
-      />
+      <ChevronDown classes="absolute top-[calc(100%-8px)] left-[4.5px]" />
     </div>
   </div>
 </section>

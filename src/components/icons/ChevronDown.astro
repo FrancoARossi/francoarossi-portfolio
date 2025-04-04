@@ -1,4 +1,6 @@
 ---
+import { twMerge } from "tailwind-merge";
+
 const { classes } = Astro.props;
 ---
 
@@ -6,7 +8,7 @@ const { classes } = Astro.props;
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"
-  class="text-gray-600 dark:text-gray-500"
+  class={twMerge("text-gray-600 dark:text-gray-500", classes)}
   viewBox="0 0 24 24"
   fill="none"
   stroke="currentColor"
