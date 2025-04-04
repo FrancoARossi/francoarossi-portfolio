@@ -1,9 +1,13 @@
 ---
+import ProjectItem from "@components/ProjectItem.astro";
 import Title from "@components/Title.astro";
+import { PROJECTS } from "@utils/constants.ts";
 ---
 
 <section id="projects" class="flex flex-col gap-12">
   <Title> Projects </Title>
 
-  
+  <ol class="flex flex-col gap-10 text-start">
+    {PROJECTS.map((projectProps) => <ProjectItem {...projectProps} />)}
+  </ol>
 </section>

@@ -1,7 +1,10 @@
+import DuckpediaImg from "@assets/images/projects/duckpedia.webp";
+import PortfolioImg from "@assets/images/projects/portfolio.webp";
+
 export const NAV_LINKS = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
-  // { name: "Projects", href: "#projects" },
+  { name: "Projects", href: "#projects" },
   // { name: "Education", href: "#education" },
 ];
 
@@ -84,8 +87,44 @@ export const TECHNOLOGIES_STYLES: { [technology: string]: string } = {
   GitLab:
     "border-amber-500 bg-amber-200 dark:bg-amber-950 dark:border-amber-800",
 
+  Astrojs:
+    "border-amber-500 bg-amber-200 dark:bg-amber-950 dark:border-amber-800",
+
   default:
     "border-black-500 bg-black-200 dark:bg-black-950 dark:border-black-800",
 };
+
+export const PROJECTS = [
+  {
+    title: "Duckpedia",
+    technologies: ["Nextjs", "TailwindCSS"],
+    image: DuckpediaImg,
+    description: `A fun project born at the Sirius office from our <a
+        class="underline underline-offset-2"
+        title="Navigate to Duck Game's Steam page"
+        href="https://store.steampowered.com/app/312530/Duck_Game"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Duck Game</a
+      > culture, where colleagues choose unique hat-wearing duck avatars. As informal
+      tracking became chaotic, I developed this digital registry that allows team
+      members to browse, claim, and manage duck hats, solving ownership disputes
+      while adding a playful element to our workplace.`,
+    link: "https://duckpedia.vercel.app/",
+    githubLink: "https://github.com/FrancoARossi/duckpedia",
+  },
+  {
+    title: "Portfolio Website",
+    technologies: ["Astrojs", "TailwindCSS"],
+    image: PortfolioImg,
+    description: `Created to showcase my work and technical skills in one central hub. I
+      developed this portfolio with a minimalist design enhanced by colorful
+      gradients and subtle animations. Built with performance in mind, achieving
+      a perfect 100% Lighthouse score across all metrics and 100% score on SEO
+      checkers.`,
+    githubLink: "https://github.com/FrancoARossi/francoarossi-portfolio",
+  },
+];
 
 export const EASTER_EGGS = ["header-color", "image-shake"];

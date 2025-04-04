@@ -1,0 +1,80 @@
+---
+import Pill from "@components/Pill.astro";
+import { TECHNOLOGIES_STYLES } from "@utils/constants";
+import { Image } from "astro:assets";
+import GitHub from "./icons/GitHub.astro";
+
+type Props = {
+  title: string;
+  description?: string;
+  technologies?: string[];
+  link?: string;
+  githubLink?: string;
+  image: any;
+};
+
+const { title, image, technologies, description, link, githubLink } =
+  Astro.props;
+---
+
+<li class="pl-4">
+  <article class="flex flex-col gap-4 lg:flex-row">
+    <figure
+      class="flex size-auto flex-1 flex-col gap-2 overflow-hidden rounded-md"
+    >
+      <Image
+        src={image}
+        alt={title}
+        class="h-auto w-full rounded-md shadow-md"
+        loading="lazy"
+      />
+    </figure>
+    <div class="flex flex-1 flex-col gap-4">
+      <header class="flex">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+          {title}
+        </h3>
+      </header>
+      <p
+        class="text-base font-normal text-gray-500 dark:text-gray-400"
+        set:html={description}
+      >
+        <slot />
+      </p>
+      {
+        githubLink && (
+          <a
+            class="flex w-fit items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-2 py-1 transition-all hover:scale-110"
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="sr-only">Github link</span>
+            <div class="flex items-center gap-2">
+              <GitHub /> GitHub
+            </div>
+          </a>
+        )
+      }
+      <footer>
+        {
+          technologies ? (
+            <ul class="flex flex-wrap gap-2">
+              {technologies.map((technology) => (
+                <li>
+                  <Pill
+                    label={technology}
+                    colorClasses={
+                      TECHNOLOGIES_STYLES[technology] ||
+                      TECHNOLOGIES_STYLES["default"]
+                    }
+                  />
+                </li>
+              ))}
+            </ul>
+          ) : null
+        }
+      </footer>
+    </div>
+  </article>
+</li>
