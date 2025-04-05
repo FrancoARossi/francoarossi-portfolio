@@ -4,9 +4,10 @@ import francoRossiImage from "@assets/images/franco-rossi-no-bg.webp";
 import LinkedIn from "@components/icons/LinkedIn.astro";
 import GitHub from "@components/icons/GitHub.astro";
 import { yearsOfExperience } from "@utils/functions";
+import { SECTIONS_IDS } from "@utils/constants";
 ---
 
-<section id="hero" class="flex flex-col items-center gap-6">
+<section id={SECTIONS_IDS.hero} class="flex flex-col items-center gap-6">
   <figure
     id="franco-rossi"
     class="size-40 cursor-pointer overflow-hidden rounded-full bg-[radial-gradient(theme(colors.indigo.500),theme(colors.indigo.200))] brightness-95"

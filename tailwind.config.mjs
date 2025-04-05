@@ -7,16 +7,21 @@ export default {
       animation: {
         gradient: "gradient 3s linear infinite",
         shake: "shake 0.5s cubic-bezier(.36,.07,.19,.97)",
+        reveal: "reveal 0.5s ease-in-out",
       },
       keyframes: {
         gradient: {
-          to: { "background-position": "200% center" },
+          "100%": { "background-position": "200% center" },
         },
         shake: {
-          "10%, 90%": { transform: "translate3d(-1px, 0, 0)" },
-          "20%, 80%": { transform: "translate3d(2px, 0, 0)" },
-          "30%, 50%, 70%": { transform: "translate3d(-4px, 0, 0)" },
-          "40%, 60%": { transform: "translate3d(4px, 0, 0)" },
+          "10%, 90%": { transform: "translateX(-1px)" },
+          "20%, 80%": { transform: "translateX(2px)" },
+          "30%, 50%, 70%": { transform: "translateX(-4px)" },
+          "40%, 60%": { transform: "translateX(4px)" },
+        },
+        reveal: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
     },

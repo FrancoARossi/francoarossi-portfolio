@@ -8,6 +8,14 @@ export const NAV_LINKS = [
   // { name: "Education", href: "#education" },
 ];
 
+export const SECTIONS_IDS = {
+  hero: "hero",
+  about: "about",
+  experience: "experience",
+  projects: "projects",
+  education: "education",
+};
+
 export const TECHNOLOGIES_STYLES: { [technology: string]: string } = {
   JavaScript:
     "border-yellow-500 bg-yellow-200 dark:bg-yellow-950 dark:border-yellow-800",

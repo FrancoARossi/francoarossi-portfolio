@@ -1,0 +1,38 @@
+<slot />
+
+<script>
+  import { SECTIONS_IDS } from "@utils/constants";
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target as HTMLElement;
+          target.classList.remove("opacity-0", "translate-y-10");
+          target.classList.add("animate-reveal");
+          observer.unobserve(target);
+        }
+      });
+    },
+    {
+      rootMargin: "0px",
+      threshold: 0.1,
+    }
+  );
+
+  const sectionsSelector = Object.values(SECTIONS_IDS)
+    .map((id) => `#${id}`)
+    .join(", ");
+
+  const sections = document.querySelectorAll(sectionsSelector);
+
+  sections.forEach((el) => {
+    el.classList.add(
+      "translate-y-10",
+      "opacity-0",
+      "transition-all",
+      "duration-500"
+    );
+    observer.observe(el);
+  });
+</script>
