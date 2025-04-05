@@ -11,9 +11,11 @@ import { EASTER_EGGS } from "@utils/constants.js";
     } easter eggs <span id="easter-eggs-icon"></span></span
   >
   <span>
-    Made with 💜 by <span
+    Made with 💜 by <a
       id="this-guy"
-      class="cursor-pointer underline underline-offset-2">this guy</span
+      href="#"
+      class="cursor-pointer select-none underline underline-offset-2"
+      >this guy</a
     > 👈🏻
   </span>
 </footer>
@@ -22,7 +24,10 @@ import { EASTER_EGGS } from "@utils/constants.js";
   import { updateEasterEggsIcon } from "@utils/functions.js";
 
   const thisGuy = document.getElementById("this-guy");
-  thisGuy?.addEventListener("click", () => scrollTo(0, 0));
+  thisGuy?.addEventListener("click", (e) => {
+    e.preventDefault();
+    scrollTo(0, 0)
+  });
 
   const foundEasterEggs =
     localStorage.getItem("foundEasterEggs")?.split(",") || [];
