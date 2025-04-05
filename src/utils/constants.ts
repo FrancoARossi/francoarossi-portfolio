@@ -68,7 +68,11 @@ export const TECHNOLOGIES_STYLES: { [technology: string]: string } = {
 
   Redis: "border-red-600 bg-red-100 dark:bg-red-900 dark:border-red-700",
 
+  Prisma: "border-cyan-600 bg-cyan-50 dark:bg-cyan-900 dark:border-cyan-700",
+
   Docker: "border-sky-600 bg-sky-100 dark:bg-sky-900 dark:border-sky-700",
+
+  Sidekiq: "border-gray-500 bg-gray-100 dark:bg-gray-900 dark:border-gray-600",
 
   "Ruby on Rails":
     "border-red-600 bg-red-100 dark:bg-red-900 dark:border-red-700",
@@ -99,7 +103,7 @@ export const TECHNOLOGIES_STYLES: { [technology: string]: string } = {
 export const PROJECTS = [
   {
     title: "Duckpedia",
-    technologies: ["Nextjs", "Typescript", "TailwindCSS"],
+    technologies: ["Nextjs", "Typescript", "Prisma", "TailwindCSS"],
     image: DuckpediaImg,
     description: `A fun project born at the Sirius office from our <a
         class="underline underline-offset-2"
