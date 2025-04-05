@@ -1,5 +1,6 @@
 import DuckpediaImg from "@assets/images/projects/duckpedia.webp";
 import PortfolioImg from "@assets/images/projects/portfolio.webp";
+import SidekiqImg from "@assets/images/projects/sidekiq.webp";
 
 export const NAV_LINKS = [
   { name: "About", href: "#about" },
@@ -17,95 +18,88 @@ export const SECTIONS_IDS = {
 };
 
 export const TECHNOLOGIES_STYLES: { [technology: string]: string } = {
-  JavaScript:
-    "border-yellow-500 bg-yellow-200 dark:bg-yellow-950 dark:border-yellow-800",
+  Javascript:
+    "border-yellow-400 bg-yellow-100 dark:bg-yellow-900 dark:border-yellow-600",
 
-  TypeScript:
-    "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
+  Typescript:
+    "border-blue-600 bg-blue-100 dark:bg-blue-900 dark:border-blue-600",
 
-  React:
-    "border-indigo-500 bg-indigo-200 dark:bg-indigo-950 dark:border-indigo-800",
+  React: "border-cyan-500 bg-cyan-100 dark:bg-cyan-900 dark:border-cyan-600",
 
   Redux:
-    "border-purple-500 bg-purple-200 dark:bg-purple-950 dark:border-purple-800",
+    "border-purple-600 bg-purple-100 dark:bg-purple-900 dark:border-purple-700",
 
   "React Native":
-    "border-indigo-500 bg-indigo-200 dark:bg-indigo-950 dark:border-indigo-800",
+    "border-cyan-500 bg-cyan-100 dark:bg-cyan-900 dark:border-cyan-600",
 
-  Expo: "border-indigo-500 bg-indigo-200 dark:bg-indigo-950 dark:border-indigo-800",
+  Expo: "border-violet-800 bg-violet-100 dark:bg-violet-900 dark:border-violet-700",
 
   Firebase:
-    "border-yellow-500 bg-yellow-200 dark:bg-yellow-950 dark:border-yellow-800",
+    "border-amber-500 bg-amber-100 dark:bg-amber-900 dark:border-amber-600",
 
-  Strapi: "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
+  Strapi:
+    "border-indigo-600 bg-indigo-100 dark:bg-indigo-900 dark:border-indigo-700",
 
-  MUI: "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
+  MUI: "border-sky-600 bg-sky-100 dark:bg-sky-900 dark:border-sky-600",
 
-  RSpec: "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
+  RSpec: "border-red-600 bg-red-100 dark:bg-red-900 dark:border-red-700",
 
   NodeJS:
-    "border-green-500 bg-green-200 dark:bg-green-950 dark:border-green-800",
+    "border-green-700 bg-green-100 dark:bg-green-900 dark:border-green-700",
 
-  Express:
-    "border-green-500 bg-green-200 dark:bg-green-950 dark:border-green-800",
+  Express: "border-gray-500 bg-gray-100 dark:bg-gray-800 dark:border-gray-600",
 
-  Arduino: "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
+  Arduino: "border-teal-600 bg-teal-100 dark:bg-teal-900 dark:border-teal-700",
 
-  "C/C++": "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
+  "C/C++": "border-blue-700 bg-blue-100 dark:bg-blue-900 dark:border-blue-700",
 
   Python:
-    "border-yellow-500 bg-yellow-200 dark:bg-yellow-950 dark:border-yellow-800",
+    "border-blue-600 bg-gradient-to-r from-blue-100 to-yellow-100 dark:from-blue-900 dark:to-yellow-900 dark:border-blue-700",
 
-  Linux:
-    "border-black-500 bg-black-200 dark:bg-black-950 dark:border-black-800",
+  Linux: "border-gray-700 bg-gray-100 dark:bg-gray-900 dark:border-gray-800",
 
-  GraphQL: "border-pink-500 bg-pink-200 dark:bg-pink-950 dark:border-pink-800",
+  GraphQL: "border-pink-600 bg-pink-100 dark:bg-pink-900 dark:border-pink-700",
 
   PostgreSQL:
-    "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
+    "border-blue-700 bg-blue-100 dark:bg-blue-900 dark:border-blue-700",
 
   MongoDB:
-    "border-green-500 bg-green-200 dark:bg-green-950 dark:border-green-800",
+    "border-green-600 bg-green-100 dark:bg-green-900 dark:border-green-700",
 
-  Redis: "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
+  Redis: "border-red-600 bg-red-100 dark:bg-red-900 dark:border-red-700",
 
-  Docker: "border-blue-500 bg-blue-200 dark:bg-blue-950 dark:border-blue-800",
+  Docker: "border-sky-600 bg-sky-100 dark:bg-sky-900 dark:border-sky-700",
 
-  "Ruby On Rails":
-    "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
+  "Ruby on Rails":
+    "border-red-600 bg-red-100 dark:bg-red-900 dark:border-red-700",
 
-  Ruby: "border-red-500 bg-red-200 dark:bg-red-950 dark:border-red-800",
+  Ruby: "border-red-600 bg-red-100 dark:bg-red-900 dark:border-red-700",
 
-  HTML: "border-orange-500 bg-orange-200 dark:bg-orange-950 dark:border-orange-800",
+  HTML: "border-orange-600 bg-orange-100 dark:bg-orange-900 dark:border-orange-700",
 
-  CSS: "border-sky-500 bg-sky-200 dark:bg-sky-950 dark:border-sky-800",
+  CSS: "border-blue-600 bg-blue-100 dark:bg-blue-900 dark:border-blue-700",
 
   TailwindCSS:
-    "border-cyan-500 bg-cyan-200 dark:bg-cyan-950 dark:border-cyan-800",
+    "border-cyan-500 bg-cyan-100 dark:bg-cyan-900 dark:border-cyan-600",
 
-  Sass: "border-pink-500 bg-pink-200 dark:bg-pink-950 dark:border-pink-800",
+  Sass: "border-pink-600 bg-pink-100 dark:bg-pink-900 dark:border-pink-700",
 
-  Jest: "border-rose-500 bg-rose-200 dark:bg-rose-950 dark:border-rose-800",
-
-  Git: "border-rose-500 bg-rose-200 dark:bg-rose-950 dark:border-rose-800",
-
-  GitHub:
-    "border-violet-500 bg-yviolet-200 dark:bg-violet-950 dark:border-violet-800",
-
-  GitLab:
-    "border-amber-500 bg-amber-200 dark:bg-amber-950 dark:border-amber-800",
+  Jest: "border-rose-600 bg-rose-100 dark:bg-rose-900 dark:border-rose-700",
 
   Astrojs:
-    "border-amber-500 bg-amber-200 dark:bg-amber-950 dark:border-amber-800",
+    "border-orange-500 bg-gradient-to-r from-orange-100 to-purple-100 dark:from-orange-900 dark:to-purple-900 dark:border-orange-600",
 
-  default:
-    "border-black-500 bg-black-200 dark:bg-black-950 dark:border-black-800",
+  Minitest: "border-red-600 bg-red-100 dark:bg-red-900 dark:border-red-700",
+
+  Nextjs: "border-black bg-gray-100 dark:bg-gray-900 dark:border-gray-700",
+
+  default: "border-gray-500 bg-gray-100 dark:bg-gray-900 dark:border-gray-600",
 };
 
 export const PROJECTS = [
   {
     title: "Duckpedia",
-    technologies: ["Nextjs", "TailwindCSS"],
+    technologies: ["Nextjs", "Typescript", "TailwindCSS"],
     image: DuckpediaImg,
     description: `A fun project born at the Sirius office from our <a
         class="underline underline-offset-2"
@@ -123,8 +117,19 @@ export const PROJECTS = [
     githubLink: "https://github.com/FrancoARossi/duckpedia",
   },
   {
+    title: "Sidekiq Contribution",
+    technologies: ["Ruby on Rails", "Ruby", "Redis", "HTML", "CSS", "Minitest"],
+    image: SidekiqImg,
+    description: `Contributed to Sidekiq, a popular Ruby on Rails background job processor. 
+    As a Spanish speaker collaborating with US developers, I encountered usability issues with 
+    the automatic language detection. I implemented a language selector feature, allowing users 
+    to override their browser's locale setting. This enhancement improved accessibility for 
+    developers worldwide working in multilingual environments.`,
+    githubLink: "https://github.com/sidekiq/sidekiq/pull/6217",
+  },
+  {
     title: "Portfolio Website",
-    technologies: ["Astrojs", "TailwindCSS"],
+    technologies: ["Astrojs", "Typescript", "TailwindCSS", "HTML"],
     image: PortfolioImg,
     description: `Created to showcase my work and technical skills in one central hub. I
       developed this portfolio with a minimalist design enhanced by colorful
