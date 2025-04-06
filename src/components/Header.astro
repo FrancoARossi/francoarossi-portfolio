@@ -1,18 +1,28 @@
 ---
 import LinkedIn from "@components/icons/LinkedIn.astro";
 import { NAV_ITEMS } from "@utils/constants";
+import { Image } from "astro:assets";
+import WebsiteLogo from "@/public/images/android-chrome-192x192.png";
 ---
 
 <header
-  class="fixed left-0 top-0 z-50 flex h-16 w-full items-center justify-around bg-slate-950 text-slate-200"
+  class="fixed left-0 top-0 z-50 flex h-16 w-full justify-center bg-slate-950 text-slate-200"
 >
-  <div class="flex w-full max-w-screen-xl items-center justify-between px-10">
-    <div
-      id="franco-rossi-header"
-      class="flex cursor-pointer select-none items-center transition-all duration-300"
+  <div
+    class="flex w-full max-w-screen-xl items-center justify-between px-10 lg:px-16"
+  >
+    <figure
+      id="logo"
+      class="h-12 w-12 cursor-pointer rounded-md transition duration-300 ease-in-out hover:scale-110"
     >
-      &lt;<h2 class="font-bold">Franco Rossi</h2>&nbsp;/&gt;
-    </div>
+      <Image
+        src={WebsiteLogo}
+        alt="Website logo"
+        class="h-auto w-full rounded-md shadow-md"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
     <nav>
       <button
         data-collapse-toggle="navbar-default"
@@ -53,7 +63,7 @@ import { NAV_ITEMS } from "@utils/constants";
             </li>
           ))
         }
-        <div class="flex h-full w-full flex-col justify-end">
+        <div class="flex h-full w-full flex-col justify-end lg:hidden">
           <a
             class="group relative z-50 h-fit w-fit items-center gap-1 rounded-full border border-slate-600 bg-slate-900 text-white shadow-lg transition-all duration-300 hover:scale-110 lg:hidden"
             href="https://www.linkedin.com/in/francoarossi/"
@@ -85,30 +95,8 @@ import { NAV_ITEMS } from "@utils/constants";
 </div>
 
 <script>
-  import { completeEasterEgg } from "@utils/functions.js";
-
-  const francoRossiHeader = document.getElementById("franco-rossi-header");
-  const francoRossiHeaderColor = localStorage.getItem("francoRossiHeaderColor");
-
-  if (francoRossiHeader && francoRossiHeaderColor) {
-    francoRossiHeader.style.color = francoRossiHeaderColor;
-  }
-
-  francoRossiHeader?.addEventListener("click", (e) => {
-    const colors = [
-      "rgb(228, 228, 231)", // slate-200
-      "rgb(245, 158, 11)", // amber-500
-      "rgb(217, 70, 239)", // purple-500
-    ];
-    const el = e.currentTarget as HTMLElement;
-
-    const nextColor =
-      colors[(colors.indexOf(el.style.color || colors[0]) + 1) % colors.length];
-
-    localStorage.setItem("francoRossiHeaderColor", nextColor);
-    el.style.color = nextColor;
-
-    completeEasterEgg("header-color");
+  document.getElementById("logo")?.addEventListener("click", () => {
+    window.scrollTo(0, 0);
   });
 </script>
 

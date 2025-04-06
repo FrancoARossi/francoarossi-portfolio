@@ -99,14 +99,14 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="mx-auto flex max-w-screen-lg flex-col justify-center overscroll-none bg-slate-950 px-10"
+    class="mx-auto flex max-w-screen-lg flex-col justify-center overscroll-none bg-slate-950"
   >
     <SpeedInsights />
     <DotsParticles />
 
     <Header />
 
-    <main class="px-4 py-32 text-center">
+    <main class="px-8 py-32 text-center">
       <slot />
     </main>
 

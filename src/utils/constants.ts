@@ -185,8 +185,8 @@ export const EDUCATION: Education[] = [
       hardware, sensors, programming, technologies, and management for Internet of Things (IoT) projects 
       applied to industrial solutions, home automation and smart cities among others.`,
     image: IoTCertificate,
-    imageClassNames: "max-w-[600px] md:max-w-[200px]",
+    imageClassNames: "max-w-[550px] md:max-w-[200px]",
   },
 ];
 
-export const EASTER_EGGS = ["header-color", "image-shake"];
+export const EASTER_EGGS = ["franco-shake"];
