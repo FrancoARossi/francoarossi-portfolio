@@ -28,11 +28,12 @@ const { title, image, technologies, description, link, githubLink } =
         alt={title}
         class="h-auto w-full rounded-md shadow-md transition duration-300 ease-in-out hover:scale-110"
         loading="lazy"
+        decoding="async"
       />
     </figure>
     <div class="flex flex-1 flex-col gap-4">
-      <header class="flex flex-col flex-wrap justify-between gap-3 md:flex-row">
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+      <header class="flex flex-col flex-wrap justify-between gap-4 md:flex-row">
+        <h3 class="text-gray-900 dark:text-white">
           {title}
         </h3>
         <div class="flex gap-4">
@@ -74,9 +75,9 @@ const { title, image, technologies, description, link, githubLink } =
       >
         <slot />
       </p>
-      <footer>
-        {
-          technologies ? (
+      {
+        technologies ? (
+          <footer>
             <ul class="flex flex-wrap gap-2">
               {technologies.map((technology) => (
                 <li>
@@ -90,9 +91,9 @@ const { title, image, technologies, description, link, githubLink } =
                 </li>
               ))}
             </ul>
-          ) : null
-        }
-      </footer>
+          </footer>
+        ) : null
+      }
     </div>
   </article>
 </li>

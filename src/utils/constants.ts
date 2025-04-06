@@ -1,6 +1,8 @@
 import DuckpediaImg from "@assets/images/projects/duckpedia.webp";
 import PortfolioImg from "@assets/images/projects/portfolio.webp";
 import SidekiqImg from "@assets/images/projects/sidekiq.webp";
+import AWSCertificate from "@assets/images/certificates/aws-certified-solutions-architect-associate.webp";
+import IoTCertificate from "@assets/images/certificates/iot.webp";
 
 export const NAV_LINKS = [
   { name: "About", href: "#about" },
@@ -141,6 +143,41 @@ export const PROJECTS = [
       a perfect 100% Lighthouse score across all metrics and 100% score on SEO
       checkers.`,
     githubLink: "https://github.com/FrancoARossi/francoarossi-portfolio",
+  },
+];
+
+export const EDUCATION = [
+  {
+    title: "AWS Certified Solutions Architect – Associate",
+    institution: "Amazon Web Services",
+    date: "2024",
+    description: `Acquired the AWS Certified Solutions Architect – Associate certification,
+      demonstrating proficiency in designing and deploying scalable systems on
+      AWS. This certification validates my ability to implement best practices for
+      security, cost optimization, and high availability in cloud-based
+      architectures.`,
+    link: "https://www.credly.com/badges/19c40fd4-1c1b-4b3a-a9a9-63478c588be1/public_url",
+    image: AWSCertificate,
+  },
+  {
+    title: "Information Systems Engineering",
+    institution: "Universidad Tecnológica Nacional - FRD",
+    date: "2016-Present",
+    description: `Currently pursuing a degree in Information Systems Engineering at
+      Universidad Tecnológica Nacional. This program equips me with a strong
+      foundation in software development, database management, and system
+      architecture. I am actively engaged in projects that enhance my technical
+      skills and problem-solving abilities, preparing me for a successful career
+      in the tech industry.`,
+  },
+  {
+    title: "Internet of Things Course",
+    institution: "Universidad Tecnológica Nacional - FRRe",
+    date: "2019",
+    description: `Certificate that covers various communication protocols, 
+      hardware, sensors, programming, technologies, and management for Internet of Things (IoT) projects 
+      applied to industrial solutions, home automation and smart cities among others.`,
+    image: IoTCertificate,
   },
 ];
 

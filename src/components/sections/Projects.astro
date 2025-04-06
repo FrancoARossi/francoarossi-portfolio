@@ -5,8 +5,7 @@ import { PROJECTS, SECTIONS_IDS } from "@utils/constants.ts";
 ---
 
 <section id={SECTIONS_IDS.projects} class="flex flex-col gap-12">
-  <Title> Projects </Title>
-
+  <Title>Projects</Title>
   <ol class="flex flex-col gap-10 text-start">
     {PROJECTS.map((projectProps) => <ProjectItem {...projectProps} />)}
   </ol>

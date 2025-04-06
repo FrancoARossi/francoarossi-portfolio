@@ -1,8 +1,12 @@
 ---
+import EducationItem from "@components/EducationItem.astro";
 import Title from "@components/Title.astro";
-import { SECTIONS_IDS } from "@utils/constants";
+import { EDUCATION, SECTIONS_IDS } from "@utils/constants";
 ---
 
 <section id={SECTIONS_IDS.education} class="flex flex-col gap-12">
-  <Title> EDUCATION </Title>
+  <Title>Education</Title>
+  <ol class="flex flex-col gap-10 text-start">
+    {EDUCATION.map((educationProps) => <EducationItem {...educationProps} />)}
+  </ol>
 </section>
