@@ -26,6 +26,7 @@ import { EASTER_EGGS } from "@utils/constants.js";
   const thisGuy = document.getElementById("this-guy");
   thisGuy?.addEventListener("click", (e) => {
     e.preventDefault();
+    window.location.hash = '#';
     scrollTo(0, 0)
   });
 

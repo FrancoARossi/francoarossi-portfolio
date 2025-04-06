@@ -5,7 +5,7 @@ export type NavItem = {
   href: string;
 };
 
-type SectionId = "hero" | "about" | "experience" | "projects" | "education";
+export type SectionId = "hero" | "about" | "experience" | "projects" | "education";
 
 export type SectionIdsMap = {
   [key in SectionId]: string;
