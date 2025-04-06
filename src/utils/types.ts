@@ -5,7 +5,12 @@ export type NavItem = {
   href: string;
 };
 
-export type SectionId = "hero" | "about" | "experience" | "projects" | "education";
+export type SectionId =
+  | "hero"
+  | "about"
+  | "experience"
+  | "projects"
+  | "education";
 
 export type SectionIdsMap = {
   [key in SectionId]: string;
@@ -31,4 +36,5 @@ export type Education = {
   description: string;
   link?: string;
   image?: ImageMetadata;
+  imageClassNames?: string;
 };

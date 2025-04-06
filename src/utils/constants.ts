@@ -3,7 +3,13 @@ import PortfolioImg from "@assets/images/projects/portfolio.webp";
 import SidekiqImg from "@assets/images/projects/sidekiq.webp";
 import AWSCertificate from "@assets/images/certificates/aws-certified-solutions-architect-associate.webp";
 import IoTCertificate from "@assets/images/certificates/iot.webp";
-import type { Education, NavItem, Project, SectionIdsMap, TechnologyStyle } from "@utils/types";
+import type {
+  Education,
+  NavItem,
+  Project,
+  SectionIdsMap,
+  TechnologyStyle,
+} from "@utils/types";
 
 export const NAV_ITEMS: NavItem[] = [
   { name: "About", href: "#about" },
@@ -179,6 +185,7 @@ export const EDUCATION: Education[] = [
       hardware, sensors, programming, technologies, and management for Internet of Things (IoT) projects 
       applied to industrial solutions, home automation and smart cities among others.`,
     image: IoTCertificate,
+    imageClassNames: "max-w-[600px] md:max-w-[200px]",
   },
 ];
 
