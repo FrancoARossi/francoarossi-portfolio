@@ -3,15 +3,16 @@ import PortfolioImg from "@assets/images/projects/portfolio.webp";
 import SidekiqImg from "@assets/images/projects/sidekiq.webp";
 import AWSCertificate from "@assets/images/certificates/aws-certified-solutions-architect-associate.webp";
 import IoTCertificate from "@assets/images/certificates/iot.webp";
+import type { Education, NavItem, Project, SectionIdsMap, TechnologyStyle } from "@utils/types";
 
-export const NAV_LINKS = [
+export const NAV_ITEMS: NavItem[] = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  // { name: "Education", href: "#education" },
+  { name: "Education", href: "#education" },
 ];
 
-export const SECTIONS_IDS = {
+export const SECTIONS_IDS: SectionIdsMap = {
   hero: "hero",
   about: "about",
   experience: "experience",
@@ -19,7 +20,7 @@ export const SECTIONS_IDS = {
   education: "education",
 };
 
-export const TECHNOLOGIES_STYLES: { [technology: string]: string } = {
+export const TECHNOLOGIES_STYLES: TechnologyStyle = {
   Javascript:
     "border-yellow-400 bg-yellow-100 dark:bg-yellow-900 dark:border-yellow-600",
 
@@ -102,7 +103,7 @@ export const TECHNOLOGIES_STYLES: { [technology: string]: string } = {
   default: "border-gray-500 bg-gray-100 dark:bg-gray-900 dark:border-gray-600",
 };
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     title: "Duckpedia",
     technologies: ["Nextjs", "Typescript", "Prisma", "TailwindCSS"],
@@ -146,7 +147,7 @@ export const PROJECTS = [
   },
 ];
 
-export const EDUCATION = [
+export const EDUCATION: Education[] = [
   {
     title: "AWS Certified Solutions Architect – Associate",
     institution: "Amazon Web Services",
