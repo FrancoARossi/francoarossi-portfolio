@@ -1,6 +1,6 @@
 ---
 import LinkedIn from "@components/icons/LinkedIn.astro";
-import { NAV_LINKS } from "@utils/constants";
+import { NAV_ITEMS } from "@utils/constants";
 ---
 
 <header
@@ -42,7 +42,7 @@ import { NAV_LINKS } from "@utils/constants";
         class="absolute -right-64 top-16 flex h-[calc(100dvh-64px)] w-56 flex-col items-start gap-8 bg-slate-900 p-8 transition-[right] duration-300 lg:static lg:h-auto lg:w-auto lg:flex-row lg:gap-4 lg:space-x-8 lg:border-0 lg:bg-transparent lg:p-0 rtl:space-x-reverse"
       >
         {
-          NAV_LINKS.map((link) => (
+          NAV_ITEMS.map((link) => (
             <li>
               <a
                 href={link.href}
