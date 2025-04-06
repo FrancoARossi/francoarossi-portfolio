@@ -41,31 +41,27 @@ const {
     <header class="flex">
       <h3 class="text-gray-900 dark:text-white">
         {title}
-      </h3>
-      <span>&nbsp;|&nbsp;</span>
-      {
-        companyHref ? (
-          <a
-            class={twMerge(
-              "underline decoration-transparent underline-offset-2 transition-all duration-300 ease-in-out hover:decoration-current",
-              companyColorClasses
-            )}
-            title={`Navigate to ${company}'s website`}
-            href={companyHref}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="sr-only">Link to {company}'s website</span>
-            <h3 class={companyColorClasses}>
+        <span>{" "}|{" "}</span>
+        {
+          companyHref ? (
+            <a
+              class={twMerge(
+                "underline decoration-transparent underline-offset-2 transition-all duration-300 ease-in-out hover:decoration-current",
+                companyColorClasses
+              )}
+              title={`Navigate to ${company}'s website`}
+              href={companyHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="sr-only">Link to {company}'s website</span>
               {company}
-            </h3>
-          </a>
-        ) : (
-          <h3 class={companyColorClasses}>
-            {company}
-          </h3>
-        )
-      }
+            </a>
+          ) : (
+            company
+          )
+        }
+      </h3>
     </header>
     <p class="text-base font-normal text-gray-500 dark:text-gray-400">
       <slot />
