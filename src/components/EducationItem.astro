@@ -42,7 +42,7 @@ const { image, title, institution, date, description, link, imageClassNames } =
       </p>
     </div>
     {
-      image && (
+      image && link && (
         <a href={link} target="_blank" rel="noopener noreferrer">
           <span class="sr-only">{institution} or certificate link</span>
           <figure
@@ -60,6 +60,24 @@ const { image, title, institution, date, description, link, imageClassNames } =
             />
           </figure>
         </a>
+      )
+    }
+    {
+      image && !link && (
+        <figure
+          class={twMerge(
+            "mx-auto flex max-w-[200px] flex-1 cursor-pointer flex-col gap-2 overflow-hidden rounded-md transition duration-300 ease-in-out hover:scale-110",
+            imageClassNames
+          )}
+        >
+          <Image
+            src={image}
+            alt={title}
+            class="h-auto w-full rounded-md shadow-md"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
       )
     }
   </article>
