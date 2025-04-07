@@ -1,5 +1,6 @@
 ---
 import LinkedIn from "@components/icons/LinkedIn.astro";
+import AnimatedGradientBorderEffect from "./AnimatedGradientBorderEffect.astro";
 ---
 
 <div
@@ -13,17 +14,14 @@ import LinkedIn from "@components/icons/LinkedIn.astro";
     rel="noopener noreferrer"
   >
     <div
-      class="absolute -inset-[1px] -z-10 animate-gradient rounded-full bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto] opacity-75 blur transition duration-300 group-hover:opacity-100 group-hover:duration-200"
-    >
-    </div>
-
-    <div
       class="z-10 flex h-full w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-3 py-2"
     >
       <span class="sr-only">Contact link to LinkedIn</span>
       <LinkedIn classes="w-6 h-6 lg:w-4 lg:h-4" />
       <span class="hidden lg:block">Let's connect!</span>
     </div>
+
+    <AnimatedGradientBorderEffect />
   </a>
 </div>
 

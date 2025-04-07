@@ -5,6 +5,7 @@ import LinkedIn from "@components/icons/LinkedIn.astro";
 import GitHub from "@components/icons/GitHub.astro";
 import { yearsOfExperience } from "@utils/functions";
 import { SECTIONS_IDS } from "@utils/constants";
+import AnimatedGradientBorderEffect from "@components/AnimatedGradientBorderEffect.astro";
 ---
 
 <section id={SECTIONS_IDS.hero} class="flex flex-col items-center gap-6">
@@ -58,10 +59,7 @@ import { SECTIONS_IDS } from "@utils/constants";
           <span class="block">LinkedIn</span>
         </div>
 
-        <div
-          class="absolute -inset-[1px] -z-10 animate-gradient rounded-full bg-[linear-gradient(to_right,theme(colors.amber.500),theme(colors.amber.400),theme(colors.fuchsia.400),theme(colors.fuchsia.500),theme(colors.fuchsia.400),theme(colors.amber.400),theme(colors.amber.500))] bg-[length:200%_auto] opacity-75 blur transition duration-300 group-hover:opacity-100 group-hover:duration-200"
-        >
-        </div>
+        <AnimatedGradientBorderEffect />
       </a>
       <a
         class="flex items-center gap-1 rounded-full border border-slate-600 bg-slate-900 px-3 py-2 transition-all hover:scale-110"
