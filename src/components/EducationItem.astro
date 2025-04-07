@@ -11,19 +11,21 @@ const { image, title, institution, date, description, link, imageClassNames } =
     <div class="flex flex-1 flex-col gap-4">
       <header class="flex flex-col flex-wrap gap-1">
         <div class="flex items-center justify-between gap-4">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline decoration-transparent underline-offset-2 transition-all duration-300 ease-in-out hover:decoration-current"
-          >
-            <span class="sr-only">
-              {institution} or certificate link
-            </span>
-            <h3 class="text-gray-900 dark:text-white">
-              {title}
-            </h3>
-          </a>
+          {
+            link ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline decoration-transparent underline-offset-2 transition-all duration-300 ease-in-out hover:decoration-current"
+              >
+                <span class="sr-only">{institution} or certificate link</span>
+                <h3 class="text-gray-900 dark:text-white">{title}</h3>
+              </a>
+            ) : (
+              <h3 class="text-gray-900 dark:text-white">{title}</h3>
+            )
+          }
           <time datetime={date} class="text-sm">
             {date}
           </time>

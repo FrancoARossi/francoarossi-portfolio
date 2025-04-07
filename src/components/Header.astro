@@ -53,13 +53,8 @@ import WebsiteLogo from "@/public/images/android-chrome-192x192.png";
       >
         {
           NAV_ITEMS.map((link) => (
-            <li>
-              <a
-                href={link.href}
-                class="transition-all duration-200 hover:text-slate-400"
-              >
-                {link.name}
-              </a>
+            <li class="transition-all duration-300 ease-in-out hover:scale-110">
+              <a href={link.href}>{link.name}</a>
             </li>
           ))
         }

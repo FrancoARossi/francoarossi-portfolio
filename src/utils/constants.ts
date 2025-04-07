@@ -165,6 +165,7 @@ export const EDUCATION: Education[] = [
       architectures.`,
     link: "https://www.credly.com/badges/19c40fd4-1c1b-4b3a-a9a9-63478c588be1/public_url",
     image: AWSCertificate,
+    imageClassNames: "max-w-[180px] md:max-w-[150px]",
   },
   {
     title: "Information Systems Engineering",
@@ -185,8 +186,8 @@ export const EDUCATION: Education[] = [
       hardware, sensors, programming, technologies, and management for Internet of Things (IoT) projects 
       applied to industrial solutions, home automation and smart cities among others.`,
     image: IoTCertificate,
-    imageClassNames: "max-w-[550px] md:max-w-[200px]",
+    imageClassNames: "max-w-[300px] sm:max-w-[400px] md:max-w-[200px]",
   },
 ];
 
-export const EASTER_EGGS = ["franco-shake"];
+export const EASTER_EGGS = ["franco-shake", "lila-limon"];

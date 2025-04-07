@@ -48,9 +48,46 @@ import { SECTIONS_IDS } from "@utils/constants";
       />
       <figcaption>
         <p class="text-sm text-gray-400">
-          <em>A special moment with Lila and Limón, two of my pups.</em>
+          <em
+            >A special moment with <span
+              id="lila"
+              class="cursor-pointer transition-colors duration-300">Lila</span
+            > and <span
+              id="limon"
+              class="cursor-pointer transition-colors duration-300">Limón</span
+            >, two of my pups.</em
+          >
         </p>
       </figcaption>
     </figure>
   </article>
 </section>
+
+<script>
+  import { completeEasterEgg } from "@utils/functions.js";
+
+  const lila = document.getElementById("lila") as HTMLElement;
+  const limon = document.getElementById("limon") as HTMLElement;
+
+  let clickCount = 0;
+
+  lila.addEventListener("click", () => {
+    lila.classList.toggle("text-fuchsia-500");
+
+    if (clickCount < 2) clickCount++;
+
+    if (clickCount === 2) {
+      completeEasterEgg("lila-limon");
+    }
+  });
+
+  limon.addEventListener("click", () => {
+    limon.classList.toggle("text-amber-500");
+
+    if (clickCount < 2) clickCount++;
+
+    if (clickCount === 2) {
+      completeEasterEgg("lila-limon");
+    }
+  });
+</script>
