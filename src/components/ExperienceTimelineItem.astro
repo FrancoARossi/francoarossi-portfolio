@@ -11,6 +11,7 @@ type Props = {
   dotColorClasses: string;
   companyHref?: string;
   technologies?: string[];
+  liClass?: string;
 };
 
 const {
@@ -21,10 +22,11 @@ const {
   dotColorClasses,
   companyHref,
   technologies,
+  liClass,
 } = Astro.props;
 ---
 
-<li class="pl-4">
+<li class={twMerge("pl-4", liClass)}>
   <article>
     <div
       class={twMerge(
