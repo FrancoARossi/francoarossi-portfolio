@@ -9,8 +9,10 @@ const { image, title, institution, date, description, link, imageClassNames } =
 <li>
   <article class="flex flex-col-reverse gap-6 md:flex-row">
     <div class="flex flex-1 flex-col gap-4">
-      <header class="flex flex-col flex-wrap gap-1">
-        <div class="flex items-center justify-between gap-4">
+      <header
+        class="flex flex-col sm:flex-row sm:items-start sm:justify-between sm:gap-4"
+      >
+        <div>
           {
             link ? (
               <a
@@ -26,13 +28,13 @@ const { image, title, institution, date, description, link, imageClassNames } =
               <h3 class="text-gray-900 dark:text-white">{title}</h3>
             )
           }
-          <time datetime={date} class="text-sm">
-            {date}
-          </time>
+          <span class="text-sm font-normal">
+            {institution}
+          </span>
         </div>
-        <span class="text-sm font-normal">
-          {institution}
-        </span>
+        <time datetime={date} class="text-sm sm:pt-1">
+          {date}
+        </time>
       </header>
       <p
         class="text-base font-normal text-gray-500 dark:text-gray-400"
@@ -41,13 +43,35 @@ const { image, title, institution, date, description, link, imageClassNames } =
         <slot />
       </p>
     </div>
-    {
-      image && link && (
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <span class="sr-only">{institution} or certificate link</span>
+    <div
+      class="flex items-center justify-center md:flex-shrink-0 md:flex-grow-0 md:basis-[200px]"
+    >
+      {
+        image && link && (
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <span class="sr-only">{institution} or certificate link</span>
+            <figure
+              class={twMerge(
+                "mx-auto flex max-w-[200px] flex-1 flex-col gap-2 overflow-hidden rounded-md transition duration-300 ease-in-out hover:scale-110",
+                imageClassNames
+              )}
+            >
+              <Image
+                src={image}
+                alt={title}
+                class="h-auto w-full rounded-md shadow-md"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </a>
+        )
+      }
+      {
+        image && !link && (
           <figure
             class={twMerge(
-              "mx-auto flex max-w-[200px] flex-1 cursor-pointer flex-col gap-2 overflow-hidden rounded-md transition duration-300 ease-in-out hover:scale-110",
+              "mx-auto flex max-w-[200px] flex-1 flex-col gap-2 overflow-hidden rounded-md transition duration-300 ease-in-out hover:scale-110",
               imageClassNames
             )}
           >
@@ -59,26 +83,8 @@ const { image, title, institution, date, description, link, imageClassNames } =
               decoding="async"
             />
           </figure>
-        </a>
-      )
-    }
-    {
-      image && !link && (
-        <figure
-          class={twMerge(
-            "mx-auto flex max-w-[200px] flex-1 cursor-pointer flex-col gap-2 overflow-hidden rounded-md transition duration-300 ease-in-out hover:scale-110",
-            imageClassNames
-          )}
-        >
-          <Image
-            src={image}
-            alt={title}
-            class="h-auto w-full rounded-md shadow-md"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
-      )
-    }
+        )
+      }
+    </div>
   </article>
 </li>
