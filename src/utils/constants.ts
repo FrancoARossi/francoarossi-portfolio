@@ -106,13 +106,25 @@ export const TECHNOLOGIES_STYLES: TechnologyStyle = {
 
   Nextjs: "border-black bg-gray-100 dark:bg-gray-900 dark:border-gray-700",
 
+  MySQL: "border-blue-800 bg-blue-100 dark:bg-blue-900 dark:border-blue-700",
+
+  Supabase:
+    "border-emerald-600 bg-gradient-to-r from-emerald-100 to-green-100 dark:from-emerald-900 dark:to-green-900 dark:border-emerald-700",
+
   default: "border-gray-500 bg-gray-100 dark:bg-gray-900 dark:border-gray-600",
 };
 
 export const PROJECTS: Project[] = [
   {
     title: "Duckpedia",
-    technologies: ["Nextjs", "Typescript", "Prisma", "TailwindCSS"],
+    technologies: [
+      "Nextjs",
+      "Typescript",
+      "Prisma",
+      "Supabase",
+      "MySQL",
+      "TailwindCSS",
+    ],
     image: DuckpediaImg,
     description: `A fun project born at the Sirius office from our <a
         class="underline underline-offset-2"
