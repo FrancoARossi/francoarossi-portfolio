@@ -194,9 +194,10 @@ export const EDUCATION: Education[] = [
     title: "Internet of Things Course",
     institution: "Universidad Tecnológica Nacional - FRRe",
     date: "2019",
-    description: `Certificate that covers various communication protocols, 
-      hardware, sensors, programming, technologies, and management for Internet of Things (IoT) projects 
-      applied to industrial solutions, home automation and smart cities among others.`,
+    description: `Completed specialized IoT training covering communication protocols, embedded systems, 
+      and sensor integration. Developed skills in designing connected solutions for industrial and smart 
+      home applications, applying this knowledge through hands-on projects that deepened my understanding 
+      of real-world IoT implementations.`,
     image: IoTCertificate,
     imageClassNames: "max-w-[300px] sm:max-w-[400px] md:max-w-[200px]",
   },
