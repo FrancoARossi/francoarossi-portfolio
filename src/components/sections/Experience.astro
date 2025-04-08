@@ -1,7 +1,7 @@
 ---
 import ExperienceTimelineItem from "@components/ExperienceTimelineItem.astro";
 import Title from "@components/Title.astro";
-import ChevronDown from "@components/icons/ChevronDown.astro";
+import ChevronUp from "@components/icons/ChevronUp.astro";
 import { SECTIONS_IDS } from "@utils/constants";
 ---
 
@@ -27,7 +27,7 @@ import { SECTIONS_IDS } from "@utils/constants";
           >
         </ExperienceTimelineItem>
       </ol>
-      <ChevronDown classes="absolute -left-[11.5px] -top-[16px] rotate-180" />
+      <ChevronUp classes="absolute -left-[7.5px] -top-[12px]" />
     </div>
 
     <div>
@@ -154,24 +154,30 @@ import { SECTIONS_IDS } from "@utils/constants";
       </ol>
     </div>
 
-    <ol
-      class="b flex w-fit flex-col gap-10 border-s border-t border-gray-200 pb-4 pr-4 pt-4 text-start dark:border-gray-700"
-    >
-      <ExperienceTimelineItem
-        title="Systems Lab Intern"
-        company="UTN-FRD"
-        companyHref="https://lsi.frd.utn.edu.ar/"
-        companyColorClasses="text-green-800 dark:text-green-600"
-        dotColorClasses="bg-green-800 dark:border-green-800 dark:bg-green-600"
-        timePeriod="Apr 2019 - Dec 2020"
-        technologies={["Python", "C/C++", "Arduino", "Linux"]}
+    <div class="relative">
+      <ol
+        class="b flex w-fit flex-col gap-10 border-s border-t border-gray-200 pb-4 pr-4 pt-4 text-start dark:border-gray-700"
       >
-        Worked on a project focused on the <span
-          class="text-slate-800 dark:text-slate-100"
-          >research and development</span
-        > of a <br />
-        video game console with support for sensory peripherals.
-      </ExperienceTimelineItem>
-    </ol>
+        <ExperienceTimelineItem
+          title="Systems Lab Intern"
+          company="UTN-FRD"
+          companyHref="https://lsi.frd.utn.edu.ar/"
+          companyColorClasses="text-green-800 dark:text-green-600"
+          dotColorClasses="bg-green-800 dark:border-green-800 dark:bg-green-600"
+          timePeriod="Apr 2019 - Dec 2020"
+          technologies={["Python", "C/C++", "Arduino", "Linux"]}
+        >
+          Worked on a project focused on the <span
+            class="text-slate-800 dark:text-slate-100"
+            >research and development</span
+          > of a <br />
+          video game console with support for sensory peripherals.
+        </ExperienceTimelineItem>
+      </ol>
+      <div
+        class="absolute -start-[5.5px] h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-700 dark:bg-gray-700"
+      >
+      </div>
+    </div>
   </div>
 </section>
