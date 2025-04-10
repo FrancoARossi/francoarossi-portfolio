@@ -5,10 +5,10 @@ import { TECHNOLOGIES_STYLES } from "@utils/constants";
 
 type Props = {
   title: string;
-  company: string;
   timePeriod: string;
-  companyColorClasses: string;
   dotColorClasses: string;
+  company?: string;
+  companyColorClasses?: string;
   companyHref?: string;
   technologies?: string[];
   liClass?: string;
@@ -43,9 +43,9 @@ const {
     <header class="flex">
       <h3 class="text-gray-900 dark:text-white">
         {title}
-        <span>{" "}|{" "}</span>
+        {company && <span> | </span>}
         {
-          companyHref ? (
+          company && companyHref ? (
             <a
               class={twMerge(
                 "underline decoration-transparent underline-offset-2 transition-all duration-300 ease-in-out hover:decoration-current",
