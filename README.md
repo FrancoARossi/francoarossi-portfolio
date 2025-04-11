@@ -1,54 +1,113 @@
-# Astro Starter Kit: Basics
+# Franco Rossi's Portfolio
 
-```sh
-npm create astro@latest -- --template basics
+[![Astro](https://img.shields.io/badge/Astro-4.4-FF5D01.svg?logo=astro&logoColor=white)](https://astro.build/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000.svg?logo=vercel&logoColor=white)](https://vercel.com/)
+
+A modern, responsive portfolio website showcasing my work and experience as a Full Stack Developer.
+
+## 🚀 Live Demo
+
+Visit my portfolio at [francorossi.dev](https://francorossi.dev)
+
+## ✨ Features
+
+- **Performance-first architecture** using Astro's partial hydration
+- **Responsive design** that looks great on all devices
+- **Interactive elements** with subtle animations and easter eggs
+- **Accessibility-focused** development
+- **SEO optimized** with proper meta tags and structured data
+- **Perfect Lighthouse scores** across all metrics
+
+## 🛠️ Technologies
+
+- [Astro](https://astro.build/) - Core framework
+- [TailwindCSS](https://tailwindcss.com/) - Styling
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Vercel](https://vercel.com/) - Hosting and analytics
+- [tsParticles](https://particles.js.org/) - Background particle effects
+
+## 📋 Project Structure
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-│   └── favicon.svg
+├── public/            # Static assets
+│   ├── images/        # Static image files
+│   │   ├── ...
+│   └── site.webmanifest
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/        # Processed assets
+│   │   ├── images/    # Images processed by Astro
+│   │   │   ├── ...
+│   ├── components/    # UI components
+│   │   ├── icons/     # SVG icons
+│   │   │   ├── ...
+│   │   ├── sections/  # Page sections
+│   │   │   ├── ...
+│   │   ├── ...
+│   ├── layouts/       # Page layouts
+│   │   └── ...
+│   ├── pages/         # Page components
+│   │   └── ...
+│   └── utils/         # Helper functions, types, and constants
+│       ├── ...
+├── .vscode/           # VS Code settings
+│   ├── ...
+├── .prettierrc        # Prettier configuration
+├── astro.config.mjs   # Astro configuration
+├── bun.lockb          # Bun lockfile (package lock)
+├── package.json       # Project dependencies
+├── README.md          # Project documentation
+├── tailwind.config.mjs # Tailwind configuration
+├── tsconfig.json      # TypeScript configuration
+└── .gitignore         # Git ignore file
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🧞 Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Prerequisites
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Node.js (v18+)
+- A package manager (npm, yarn, bun, etc.)
 
-## 🧞 Commands
+### Setup (Using `bun`)
 
-All commands are run from the root of the project, from a terminal:
+1. Clone the repository:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+git clone https://github.com/FrancoARossi/francoarossi-portfolio.git
+cd francoarossi-portfolio
+```
 
-## 👀 Want to learn more?
+2. Install dependencies:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+bun install
+```
+
+3. Start the development server:
+
+```bash
+bun dev
+```
+
+4. Open your browser and navigate to `http://localhost:4321` to view the site.
+
+### 🚀 Building for Production
+
+```bash
+bun build
+```
+
+### 📝 License
+
+This project is open source and available under the MIT License.
+
+### 🔎 Easter Eggs
+
+The site includes several hidden interactive elements. Can you find them all? 👀
+
+---
+
+Built with 💜 by Franco Rossi
