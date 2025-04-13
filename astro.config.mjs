@@ -1,12 +1,16 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
+import sitemap from "@astrojs/sitemap";
 
+// https://astro.build/config
 export default defineConfig({
   output: "hybrid",
-  integrations: [tailwind()],
+  integrations: [tailwind(), sitemap()],
   adapter: vercel({
-    webAnalytics: { enabled: true },
+    webAnalytics: {
+      enabled: true
+    }
   }),
   site: "https://francoarossi.vercel.app/",
   vite: {
@@ -17,8 +21,8 @@ export default defineConfig({
         "@layouts": "/src/layouts",
         "@pages": "/src/pages",
         "@assets": "/src/assets",
-        "@": "",
-      },
-    },
-  },
+        "@": ""
+      }
+    }
+  }
 });

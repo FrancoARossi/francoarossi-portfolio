@@ -1,8 +1,8 @@
 # Franco Rossi's Portfolio
 
-[![Astro](https://img.shields.io/badge/Astro-4.4-FF5D01.svg?logo=astro&logoColor=white)](https://astro.build/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Astro](https://img.shields.io/badge/Astro-+4.16-FF5D01.svg?logo=astro&logoColor=white)](https://astro.build/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-+3.4-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-+5.8-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000.svg?logo=vercel&logoColor=white)](https://vercel.com/)
 
 A modern, responsive portfolio website showcasing my work and experience as a Full Stack Developer.
