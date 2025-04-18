@@ -1,7 +1,7 @@
 import type { ImageMetadata } from "astro";
 
 export type NavItem = {
-  name: string;
+  label: string;
   href: string;
 };
 

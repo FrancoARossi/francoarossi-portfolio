@@ -12,10 +12,10 @@ import type {
 } from "@utils/types";
 
 export const NAV_ITEMS: NavItem[] = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Education", href: "#education" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Education", href: "#education" },
 ];
 
 export const SECTIONS_IDS: SectionIdsMap = {

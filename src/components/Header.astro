@@ -55,7 +55,7 @@ import AnimatedGradientBorderEffect from "./AnimatedGradientBorderEffect.astro";
         {
           NAV_ITEMS.map((link) => (
             <li class="transition-all duration-300 ease-in-out hover:scale-110">
-              <a href={link.href}>{link.name}</a>
+              <a href={link.href}>{link.label}</a>
             </li>
           ))
         }
@@ -74,7 +74,7 @@ import AnimatedGradientBorderEffect from "./AnimatedGradientBorderEffect.astro";
               <span class="block"> Let's connect!</span>
             </div>
 
-            <AnimatedGradientBorderEffect/>
+            <AnimatedGradientBorderEffect />
           </a>
         </div>
       </menu>
