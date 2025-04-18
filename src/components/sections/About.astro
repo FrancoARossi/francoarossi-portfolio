@@ -9,7 +9,7 @@ import { SECTIONS_IDS } from "@utils/constants";
 <section id={SECTIONS_IDS.about} class="flex flex-col gap-12">
   <Title>About Me</Title>
   <article class="flex flex-col items-center gap-10 lg:flex-row">
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-[2] flex-col gap-2">
       <p class="text-justify text-gray-500 dark:text-gray-400">
         I'm a <Highlight>passionate software developer</Highlight> with an engineering
         background who thrives in web development. While <Highlight
@@ -36,9 +36,7 @@ import { SECTIONS_IDS } from "@utils/constants";
         spent with my six pets - three dogs and three cats. 🐶🐱
       </p>
     </div>
-    <figure
-      class="flex max-w-[600px] flex-col gap-2 overflow-hidden rounded-md"
-    >
+    <figure class="flex flex-1 flex-col gap-2 overflow-hidden rounded-md">
       <Image
         src={aboutImg1}
         width={600}
