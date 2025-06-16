@@ -2,6 +2,7 @@ import DuckpediaImg from "@assets/images/projects/duckpedia.webp";
 import PortfolioImg from "@assets/images/projects/portfolio.webp";
 import SidekiqImg from "@assets/images/projects/sidekiq.webp";
 import AWSCertificate from "@assets/images/certificates/aws-certified-solutions-architect-associate.webp";
+import DockerCertificate from "@assets/images/certificates/docker.webp";
 import IoTCertificate from "@assets/images/certificates/iot.webp";
 import type {
   Education,
@@ -180,9 +181,21 @@ export const EDUCATION: Education[] = [
     imageClassNames: "max-w-[180px] md:max-w-[150px]",
   },
   {
+    title: "Docker Foundations Professional Certificate",
+    institution: "LinkedIn Learning",
+    date: "2025",
+    description: `Completed the Docker Foundations Professional Certificate,
+      demonstrating proficiency in containerization and orchestration. This
+      certification validates my ability to implement best practices for efficient
+      containerization of services.`,
+    link: "https://www.linkedin.com/learning/certificates/7e236872be74b18fc9cf73ec0c33e1e8b1c46d5576f53415ef0e3bc10fd48bfe",
+    image: DockerCertificate,
+    imageClassNames: "max-w-[300px] sm:max-w-[400px] md:max-w-[200px]",
+  },
+  {
     title: "Information Systems Engineering",
     institution: "Universidad Tecnológica Nacional - FRD",
-    date: "2016-Present",
+    date: "Ongoing",
     description: `Currently pursuing a degree in Information Systems Engineering at
       Universidad Tecnológica Nacional. This program equips me with a strong
       foundation in software development, database management, and system
