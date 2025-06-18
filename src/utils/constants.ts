@@ -168,6 +168,17 @@ export const PROJECTS: Project[] = [
 
 export const EDUCATION: Education[] = [
   {
+    title: "Information Systems Engineering",
+    institution: "Universidad Tecnológica Nacional - FRD",
+    date: "Ongoing",
+    description: `Currently pursuing a degree in Information Systems Engineering at
+      Universidad Tecnológica Nacional. This program equips me with a strong
+      foundation in software development, database management, and system
+      architecture. I am actively engaged in projects that enhance my technical
+      skills and problem-solving abilities, preparing me for a successful career
+      in the tech industry.`,
+  },
+  {
     title: "AWS Certified Solutions Architect – Associate",
     institution: "Amazon Web Services",
     date: "2024",
@@ -191,17 +202,6 @@ export const EDUCATION: Education[] = [
     link: "https://www.linkedin.com/learning/certificates/7e236872be74b18fc9cf73ec0c33e1e8b1c46d5576f53415ef0e3bc10fd48bfe",
     image: DockerCertificate,
     imageClassNames: "max-w-[300px] sm:max-w-[400px] md:max-w-[200px]",
-  },
-  {
-    title: "Information Systems Engineering",
-    institution: "Universidad Tecnológica Nacional - FRD",
-    date: "Ongoing",
-    description: `Currently pursuing a degree in Information Systems Engineering at
-      Universidad Tecnológica Nacional. This program equips me with a strong
-      foundation in software development, database management, and system
-      architecture. I am actively engaged in projects that enhance my technical
-      skills and problem-solving abilities, preparing me for a successful career
-      in the tech industry.`,
   },
   {
     title: "Internet of Things Course",
