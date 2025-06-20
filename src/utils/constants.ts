@@ -216,4 +216,7 @@ export const EDUCATION: Education[] = [
   },
 ];
 
-export const EASTER_EGGS = ["franco-shake", "lila-limon"];
+export const EASTER_EGGS = {
+  'ZmlyYW5jby1zaGFrZQ==': "ZnJhbmNvLXNoYWtl",
+  'bGlsYS1saW1vbg==': "bGlsYS1saW1vbg==",
+};

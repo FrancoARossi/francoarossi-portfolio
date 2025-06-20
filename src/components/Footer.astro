@@ -7,7 +7,7 @@ import { EASTER_EGGS } from "@utils/constants.js";
 >
   <span class="text-gray-500 dark:text-gray-400"
     >You've found <span id="found-easter-eggs-count"></span> out of {
-      EASTER_EGGS.length
+      Object.keys(EASTER_EGGS).length
     } easter eggs <span id="easter-eggs-icon"></span></span
   >
   <span>
@@ -26,8 +26,8 @@ import { EASTER_EGGS } from "@utils/constants.js";
   const thisGuy = document.getElementById("this-guy");
   thisGuy?.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.hash = '#';
-    scrollTo(0, 0)
+    window.location.hash = "#";
+    scrollTo(0, 0);
   });
 
   const foundEasterEggs =

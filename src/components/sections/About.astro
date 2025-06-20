@@ -64,6 +64,7 @@ import { SECTIONS_IDS } from "@utils/constants";
 
 <script>
   import { completeEasterEgg } from "@utils/functions.js";
+  import { encodeEgg } from "@utils/easterEggs.js";
 
   const lila = document.getElementById("lila") as HTMLElement;
   const limon = document.getElementById("limon") as HTMLElement;
@@ -76,7 +77,7 @@ import { SECTIONS_IDS } from "@utils/constants";
     if (clickCount < 2) clickCount++;
 
     if (clickCount === 2) {
-      completeEasterEgg("lila-limon");
+      completeEasterEgg(encodeEgg("lila-limon"));
     }
   });
 
@@ -86,7 +87,7 @@ import { SECTIONS_IDS } from "@utils/constants";
     if (clickCount < 2) clickCount++;
 
     if (clickCount === 2) {
-      completeEasterEgg("lila-limon");
+      completeEasterEgg(encodeEgg("lila-limon"));
     }
   });
 </script>

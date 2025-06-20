@@ -1,4 +1,4 @@
-import { EASTER_EGGS } from "@utils/constants";
+import { ENCODED_EGGS } from "@utils/easterEggs.js";
 
 export const yearsOfExperience = () => {
   const startDateMillis = new Date("2020-11-01").getTime();
@@ -10,13 +10,14 @@ export const yearsOfExperience = () => {
   return yearsOfExperience;
 };
 
-export const completeEasterEgg = (easterEgg: string) => {
+export const completeEasterEgg = (encodedEasterEgg: string) => {
   let foundEasterEggs =
-    localStorage.getItem("foundEasterEggs")?.split(",") || [];
+    window.atob(localStorage.getItem("foundEasterEggs") || "").split(",") || [];
 
-  if (!foundEasterEggs.includes(easterEgg)) {
-    foundEasterEggs.push(easterEgg);
-    localStorage.setItem("foundEasterEggs", foundEasterEggs.join(","));
+  if (!foundEasterEggs.includes(encodedEasterEgg)) {
+    foundEasterEggs.push(encodedEasterEgg);
+    const encodedFoundEasterEggs = window.btoa(foundEasterEggs.join(","));
+    localStorage.setItem("foundEasterEggs", encodedFoundEasterEggs);
     const foundEasterEggsCount = document.getElementById(
       "found-easter-eggs-count",
     );
@@ -31,10 +32,10 @@ export const completeEasterEgg = (easterEgg: string) => {
 export const updateEasterEggsIcon = () => {
   const easterEggsIcon = document.getElementById("easter-eggs-icon");
   let foundEasterEggs =
-    localStorage.getItem("foundEasterEggs")?.split(",") || [];
+    window.atob(localStorage.getItem("foundEasterEggs") || "").split(",") || [];
 
   if (easterEggsIcon && foundEasterEggs) {
     easterEggsIcon.innerHTML =
-      foundEasterEggs.length === EASTER_EGGS.length ? "🎉" : "👀";
+      foundEasterEggs.length === ENCODED_EGGS.length ? "🎉" : "👀";
   }
 };

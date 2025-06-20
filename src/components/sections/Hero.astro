@@ -78,6 +78,9 @@ import AnimatedGradientBorderEffect from "@components/AnimatedGradientBorderEffe
 
 <script>
   import { completeEasterEgg } from "@utils/functions.js";
+  import { encodeEgg } from "@utils/easterEggs.js";
+
+  const EASTER_EGG_KEY = encodeEgg("franco-shake");
 
   let clickCounter = 0;
 
@@ -89,7 +92,7 @@ import AnimatedGradientBorderEffect from "@components/AnimatedGradientBorderEffe
       figure?.classList.add("animate-shake");
       clickCounter = 0;
 
-      completeEasterEgg("franco-shake");
+      completeEasterEgg(EASTER_EGG_KEY);
     }
   };
 
