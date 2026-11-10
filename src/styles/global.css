@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@config "../../tailwind.config.mjs";
+
+/* The site forces <html class="dark">. Tailwind 4's default dark variant follows the OS. */
+@custom-variant dark (&:where(.dark, .dark *));

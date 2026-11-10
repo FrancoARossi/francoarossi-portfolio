@@ -64,7 +64,7 @@ export const TECHNOLOGIES_STYLES: TechnologyStyle = {
   "C/C++": "border-blue-700 bg-blue-100 dark:bg-blue-900 dark:border-blue-700",
 
   Python:
-    "border-blue-600 bg-gradient-to-r from-blue-100 to-yellow-100 dark:from-blue-900 dark:to-yellow-900 dark:border-blue-700",
+    "border-blue-600 bg-linear-to-r from-blue-100 to-yellow-100 dark:from-blue-900 dark:to-yellow-900 dark:border-blue-700",
 
   Linux: "border-gray-700 bg-gray-100 dark:bg-gray-900 dark:border-gray-800",
 
@@ -101,7 +101,7 @@ export const TECHNOLOGIES_STYLES: TechnologyStyle = {
   Jest: "border-rose-600 bg-rose-100 dark:bg-rose-900 dark:border-rose-700",
 
   Astrojs:
-    "border-orange-500 bg-gradient-to-r from-orange-100 to-purple-100 dark:from-orange-900 dark:to-purple-900 dark:border-orange-600",
+    "border-orange-500 bg-linear-to-r from-orange-100 to-purple-100 dark:from-orange-900 dark:to-purple-900 dark:border-orange-600",
 
   Minitest: "border-red-600 bg-red-100 dark:bg-red-900 dark:border-red-700",
 
@@ -110,7 +110,7 @@ export const TECHNOLOGIES_STYLES: TechnologyStyle = {
   MySQL: "border-blue-800 bg-blue-100 dark:bg-blue-900 dark:border-blue-700",
 
   Supabase:
-    "border-emerald-600 bg-gradient-to-r from-emerald-100 to-green-100 dark:from-emerald-900 dark:to-green-900 dark:border-emerald-700",
+    "border-emerald-600 bg-linear-to-r from-emerald-100 to-green-100 dark:from-emerald-900 dark:to-green-900 dark:border-emerald-700",
 
   default: "border-gray-500 bg-gray-100 dark:bg-gray-900 dark:border-gray-600",
 };

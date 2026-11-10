@@ -1,0 +1,5 @@
+[install]
+# 3 days. Bun measures this in seconds.
+minimumReleaseAge = 259200
+# astro@7.4.8 was published on 2026-11-09, so it stays inside this window until 2026-11-12.
+minimumReleaseAgeExcludes = ["astro@7.4.8"]

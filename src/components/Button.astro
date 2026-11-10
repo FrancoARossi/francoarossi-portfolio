@@ -13,7 +13,7 @@ const { variant, text, href, title, classes } = Astro.props;
 ---
 
 <a
-  class="relative inline-flex animate-gradient cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[linear-gradient(to_right,theme(colors.cyan.600),theme(colors.blue.600),theme(colors.blue.600),theme(colors.cyan.600))] bg-[length:200%_auto] p-0.5 text-sm font-medium text-gray-900 hover:scale-105 hover:text-white hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-cyan-200 dark:text-white dark:focus:ring-cyan-800"
+  class="relative inline-flex animate-gradient cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[linear-gradient(to_right,var(--color-cyan-600),var(--color-blue-600),var(--color-blue-600),var(--color-cyan-600))] bg-[length:200%_auto] p-0.5 text-sm font-medium text-gray-900 hover:scale-105 hover:text-white hover:shadow-lg focus:outline-hidden focus:ring-4 focus:ring-cyan-200 dark:text-white dark:focus:ring-cyan-800"
   href={href}
   target="_blank"
   title={title}
@@ -21,8 +21,8 @@ const { variant, text, href, title, classes } = Astro.props;
 >
   <span
     class={twMerge(
-      "relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 bg-opacity-0 ease-in",
-      variant === "primary" ? "" : "bg-opacity-0 dark:bg-gray-900",
+      "relative ease-in rounded-md bg-white/0 px-5 py-2.5 transition-all duration-75",
+      variant === "primary" ? "" : "dark:bg-gray-900/0",
       classes,
     )}
   >

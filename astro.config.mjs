@@ -1,19 +1,22 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel";
 import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  integrations: [tailwind(), sitemap()],
+  // Keep Astro 5 HTML whitespace handling. Astro 7 defaults to JSX rules.
+  compressHTML: true,
+  integrations: [sitemap()],
   adapter: vercel({
     webAnalytics: {
-      enabled: true
-    }
+      enabled: true,
+    },
   }),
   site: "https://francoarossi.vercel.app/",
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         "@components": "/src/components",
@@ -21,8 +24,8 @@ export default defineConfig({
         "@layouts": "/src/layouts",
         "@pages": "/src/pages",
         "@assets": "/src/assets",
-        "@": ""
-      }
-    }
-  }
+        "@": "",
+      },
+    },
+  },
 });
