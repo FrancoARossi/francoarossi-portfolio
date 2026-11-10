@@ -4,6 +4,7 @@ import SidekiqImg from "@assets/images/projects/sidekiq.webp";
 import AWSCertificate from "@assets/images/certificates/aws-certified-solutions-architect-associate.webp";
 import DockerCertificate from "@assets/images/certificates/docker.webp";
 import IoTCertificate from "@assets/images/certificates/iot.webp";
+import UtnFrdCertificate from "@assets/images/certificates/utn-frd.webp";
 import type {
   Education,
   NavItem,
@@ -187,7 +188,7 @@ export const PROJECTS: Project[] = [
 
 export const EDUCATION: Education[] = [
   {
-    title: "Information Systems Engineering",
+    title: "Bachelor's Degree in Information Systems Engineering",
     institution: "Universidad Tecnológica Nacional - FRD",
     date: "2026",
     description: `Achieved a Bachelor's degree in Information Systems Engineering at
@@ -196,12 +197,14 @@ export const EDUCATION: Education[] = [
       architecture. I am actively engaged in projects that enhance my technical
       skills and problem-solving abilities, preparing me for a successful career
       in the tech industry.`,
+    image: UtnFrdCertificate,
+    imageClassNames: "max-w-[180px] md:max-w-[150px]",
   },
   {
-    title: "AWS Certified Solutions Architect – Associate",
+    title: "AWS Certified Solutions Architect - Associate",
     institution: "Amazon Web Services",
     date: "2024",
-    description: `Acquired the AWS Certified Solutions Architect – Associate certification,
+    description: `Acquired the AWS Certified Solutions Architect - Associate certification,
       demonstrating proficiency in designing and deploying scalable systems on
       AWS. This certification validates my ability to implement best practices for
       security, cost optimization, and high availability in cloud-based
