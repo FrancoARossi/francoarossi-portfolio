@@ -57,6 +57,11 @@ export const TECHNOLOGIES_STYLES: TechnologyStyle = {
   NodeJS:
     "border-green-700 bg-green-100 dark:bg-green-900 dark:border-green-700",
 
+  Node: "border-green-700 bg-green-100 dark:bg-green-900 dark:border-green-700",
+
+  Figma:
+    "border-fuchsia-500 bg-linear-to-r from-orange-100 via-purple-100 to-green-100 dark:from-orange-950 dark:via-purple-900 dark:to-green-950 dark:border-fuchsia-500",
+
   Express: "border-gray-500 bg-gray-100 dark:bg-gray-800 dark:border-gray-600",
 
   Arduino: "border-teal-600 bg-teal-100 dark:bg-teal-900 dark:border-teal-700",
@@ -81,6 +86,20 @@ export const TECHNOLOGIES_STYLES: TechnologyStyle = {
   Prisma: "border-cyan-600 bg-cyan-50 dark:bg-cyan-900 dark:border-cyan-700",
 
   Docker: "border-sky-600 bg-sky-100 dark:bg-sky-900 dark:border-sky-700",
+
+  Terraform:
+    "border-violet-500 bg-violet-100 dark:bg-violet-900 dark:border-violet-500",
+
+  AWS: "border-orange-400 bg-orange-100 dark:bg-orange-900 dark:border-orange-500",
+
+  "GitLab CI/CD":
+    "border-orange-600 bg-linear-to-r from-orange-100 to-red-100 dark:from-orange-900 dark:to-red-900 dark:border-orange-600",
+
+  Nginx:
+    "border-emerald-600 bg-emerald-100 dark:bg-emerald-900 dark:border-emerald-600",
+
+  Tailscale:
+    "border-indigo-500 bg-indigo-100 dark:bg-indigo-900 dark:border-indigo-500",
 
   Sidekiq: "border-gray-500 bg-gray-100 dark:bg-gray-900 dark:border-gray-600",
 
