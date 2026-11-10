@@ -170,9 +170,9 @@ export const EDUCATION: Education[] = [
   {
     title: "Information Systems Engineering",
     institution: "Universidad Tecnológica Nacional - FRD",
-    date: "Ongoing",
-    description: `Currently pursuing a degree in Information Systems Engineering at
-      Universidad Tecnológica Nacional. This program equips me with a strong
+    date: "2026",
+    description: `Achieved a Bachelor's degree in Information Systems Engineering at
+      Universidad Tecnológica Nacional Facultad Regional Delta. This program equips me with a strong
       foundation in software development, database management, and system
       architecture. I am actively engaged in projects that enhance my technical
       skills and problem-solving abilities, preparing me for a successful career
@@ -216,7 +216,3 @@ export const EDUCATION: Education[] = [
   },
 ];
 
-export const EASTER_EGGS = {
-  'ZmlyYW5jby1zaGFrZQ==': "ZnJhbmNvLXNoYWtl",
-  'bGlsYS1saW1vbg==': "bGlsYS1saW1vbg==",
-};

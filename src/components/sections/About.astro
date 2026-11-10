@@ -66,28 +66,20 @@ import { SECTIONS_IDS } from "@utils/constants";
   import { completeEasterEgg } from "@utils/functions.js";
   import { encodeEgg } from "@utils/easterEggs.js";
 
-  const lila = document.getElementById("lila") as HTMLElement;
-  const limon = document.getElementById("limon") as HTMLElement;
+  const lila = document.getElementById("lila");
+  const limon = document.getElementById("limon");
 
-  let clickCount = 0;
+  const foundBoth = () =>
+    lila?.classList.contains("text-fuchsia-500") &&
+    limon?.classList.contains("text-amber-500");
 
-  lila.addEventListener("click", () => {
+  lila?.addEventListener("click", () => {
     lila.classList.toggle("text-fuchsia-500");
-
-    if (clickCount < 2) clickCount++;
-
-    if (clickCount === 2) {
-      completeEasterEgg(encodeEgg("lila-limon"));
-    }
+    if (foundBoth()) completeEasterEgg(encodeEgg("lila-limon"));
   });
 
-  limon.addEventListener("click", () => {
+  limon?.addEventListener("click", () => {
     limon.classList.toggle("text-amber-500");
-
-    if (clickCount < 2) clickCount++;
-
-    if (clickCount === 2) {
-      completeEasterEgg(encodeEgg("lila-limon"));
-    }
+    if (foundBoth()) completeEasterEgg(encodeEgg("lila-limon"));
   });
 </script>

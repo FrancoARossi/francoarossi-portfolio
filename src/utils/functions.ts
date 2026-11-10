@@ -1,4 +1,8 @@
-import { ENCODED_EGGS } from "@utils/easterEggs.js";
+import {
+  ENCODED_EGGS,
+  readFoundEggs,
+  saveFoundEggs,
+} from "@utils/easterEggs.js";
 
 export const yearsOfExperience = () => {
   const startDateMillis = new Date("2020-11-01").getTime();
@@ -10,32 +14,29 @@ export const yearsOfExperience = () => {
   return yearsOfExperience;
 };
 
-export const completeEasterEgg = (encodedEasterEgg: string) => {
-  let foundEasterEggs =
-    window.atob(localStorage.getItem("foundEasterEggs") || "").split(",") || [];
+export const renderEasterEggProgress = () => {
+  const foundEasterEggs = readFoundEggs();
+  const foundEasterEggsCount = document.getElementById(
+    "found-easter-eggs-count",
+  );
 
-  if (!foundEasterEggs.includes(encodedEasterEgg)) {
-    foundEasterEggs.push(encodedEasterEgg);
-    const encodedFoundEasterEggs = window.btoa(foundEasterEggs.join(","));
-    localStorage.setItem("foundEasterEggs", encodedFoundEasterEggs);
-    const foundEasterEggsCount = document.getElementById(
-      "found-easter-eggs-count",
-    );
-    if (foundEasterEggsCount) {
-      foundEasterEggsCount.innerText =
-        String(foundEasterEggs.filter(Boolean).length) || "0";
-      updateEasterEggsIcon();
-    }
+  if (foundEasterEggsCount) {
+    foundEasterEggsCount.textContent = String(foundEasterEggs.length);
+  }
+
+  const easterEggsIcon = document.getElementById("easter-eggs-icon");
+  if (easterEggsIcon) {
+    easterEggsIcon.textContent =
+      foundEasterEggs.length === ENCODED_EGGS.length ? "🎉" : "👀";
   }
 };
 
-export const updateEasterEggsIcon = () => {
-  const easterEggsIcon = document.getElementById("easter-eggs-icon");
-  let foundEasterEggs =
-    window.atob(localStorage.getItem("foundEasterEggs") || "").split(",") || [];
+export const completeEasterEgg = (encodedEasterEgg: string) => {
+  const foundEasterEggs = readFoundEggs();
 
-  if (easterEggsIcon && foundEasterEggs) {
-    easterEggsIcon.innerHTML =
-      foundEasterEggs.length === ENCODED_EGGS.length ? "🎉" : "👀";
+  if (!foundEasterEggs.includes(encodedEasterEgg)) {
+    foundEasterEggs.push(encodedEasterEgg);
+    saveFoundEggs(foundEasterEggs);
+    renderEasterEggProgress();
   }
 };

@@ -1,5 +1,5 @@
 ---
-import { EASTER_EGGS } from "@utils/constants.js";
+import { ENCODED_EGGS } from "@utils/easterEggs.js";
 ---
 
 <footer
@@ -7,7 +7,7 @@ import { EASTER_EGGS } from "@utils/constants.js";
 >
   <span class="text-gray-500 dark:text-gray-400"
     >You've found <span id="found-easter-eggs-count"></span> out of {
-      Object.keys(EASTER_EGGS).length
+      ENCODED_EGGS.length
     } easter eggs <span id="easter-eggs-icon"></span></span
   >
   <span>
@@ -21,7 +21,7 @@ import { EASTER_EGGS } from "@utils/constants.js";
 </footer>
 
 <script>
-  import { updateEasterEggsIcon } from "@utils/functions.js";
+  import { renderEasterEggProgress } from "@utils/functions.js";
 
   const thisGuy = document.getElementById("this-guy");
   thisGuy?.addEventListener("click", (e) => {
@@ -30,17 +30,5 @@ import { EASTER_EGGS } from "@utils/constants.js";
     scrollTo(0, 0);
   });
 
-  const foundEasterEggs =
-    localStorage.getItem("foundEasterEggs")?.split(",") || [];
-
-  const foundEasterEggsCount = document.getElementById(
-    "found-easter-eggs-count"
-  );
-
-  if (foundEasterEggsCount) {
-    foundEasterEggsCount.innerText =
-      String(foundEasterEggs.filter(Boolean).length) || "0";
-  }
-
-  updateEasterEggsIcon();
+  renderEasterEggProgress();
 </script>
